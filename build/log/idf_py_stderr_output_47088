@@ -1,0 +1,29 @@
+CMake Error at F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/build.cmake:540 (message):
+  WARNING: HTTPSConnectionPool(host='components-file.espressif.com',
+  port=443): Max retries exceeded with url:
+  /components/espressif/esp-dsp.json (Caused by SSLError(SSLEOFError(8, 'EOF
+  occurred in violation of protocol (_ssl.c:992)')))
+
+  WARNING: HTTPSConnectionPool(host='components-file.espressif.com',
+  port=443): Max retries exceeded with url:
+  /components/espressif/esp_codec_dev.json (Caused by SSLError(SSLEOFError(8,
+  'EOF occurred in violation of protocol (_ssl.c:992)')))
+
+  WARNING: HTTPSConnectionPool(host='components-file.espressif.com',
+  port=443): Max retries exceeded with url:
+  /components/espressif/esp_lcd_touch.json (Caused by SSLError(SSLEOFError(8,
+  'EOF occurred in violation of protocol (_ssl.c:992)')))
+
+  HINT: Please check manifest file of the following component(s): main
+
+  ERROR: Because espressif/esp-sr (1.3.3) depends on espressif/esp-dsp
+  (^1.2.1) which doesn't match any versions, espressif/esp-sr is forbidden.
+
+  So, because project depends on espressif/esp-sr (1.3.3), version solving
+  failed.
+
+Call Stack (most recent call first):
+  F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/project.cmake:547 (idf_build_process)
+  CMakeLists.txt:12 (project)
+
+

@@ -1,0 +1,8 @@
+source "F:/Espressif/frameworks/esp-idf-v5.1.2/components/bootloader/Kconfig.projbuild"
+source "F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_app_format/Kconfig.projbuild"
+source "F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/Kconfig.projbuild"
+source "F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/Kconfig.projbuild"
+source "F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/Kconfig.projbuild"
+source "D:/temp/esp-box/examples/chatgpt_demo/main/Kconfig.projbuild"
+source "D:/temp/esp-box/components/bsp/Kconfig.projbuild"
+source "D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-sr/Kconfig.projbuild"

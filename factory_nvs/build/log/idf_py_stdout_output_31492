@@ -1,0 +1,117 @@
+[0;32mI (100) boot:  4 uf2              factory app      00 00 ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42008cbf
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x18e4
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3084
+entry 0x403c9934
+[0;32mI (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan  7 2024 12:14:31[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (85) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 00600000[0m
+[0;32mI (100) boot:  4 uf2              factory app      00 00 00700000 00200000[0m
+[0;32mI (107) boot: End of partition table[0m
+[0;32mI (112) boot: Defaulting to factory image[0m
+[0;32mI (116) esp_image: segment 0: paddr=00700020 vaddr=3c060020 size=8c274h (574068) map[0m
+[0;32mI (212) esp_image: segment 1: paddr=0078c29c vaddr=3fc95a00 size=02ff8h ( 12280) load[0m
+[0;32mI (215) esp_image: segment 2: paddr=0078f29c vaddr=40374000 size=00d7ch (  3452) load[0m
+[0;32mI (218) esp_image: segment 3: paddr=00790020 vaddr=42000020 size=5d94ch (383308) map[0m
+[0;32mI (284) esp_image: segment 4: paddr=007ed974 vaddr=40374d7c size=10b9ch ( 68508) load[0m
+[0;32mI (305) boot: Loaded app from partition at offset 0x700000[0m
+[0;32mI (305) boot: Disabling RNG early entropy source...[0m
+[0;32mI (317) cpu_start: Multicore app[0m
+[0;32mI (317) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (317) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (320) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (326) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (331) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (336) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (341) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (347) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (353) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (359) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (365) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (371) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (375) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (380) esp_psram: Speed: 80MHz[0m
+[0;32mI (410) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (410) cpu_start: Pro cpu up.[0m
+[0;32mI (410) cpu_start: Starting app cpu, entry point is 0x4037578c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (684) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (693) cpu_start: Pro cpu start user code[0m
+[0;32mI (693) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (693) cpu_start: Application information:[0m
+[0;32mI (696) cpu_start: Project name:     factory_nvs[0m
+[0;32mI (701) cpu_start: App version:      v0.5.0-dirty[0m
+[0;32mI (706) cpu_start: Compile time:     Jan  7 2024 12:13:42[0m
+[0;32mI (712) cpu_start: ELF file SHA256:  c6d6392492382e57...[0m
+[0;32mI (718) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (724) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (729) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (733) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (738) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (745) heap_init: At 3FCA27E0 len 00046F30 (283 KiB): DRAM[0m
+[0;32mI (752) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (758) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (765) esp_psram: Adding pool of 7808K of PSRAM memory to heap allocator[0m
+[0;32mI (772) spi_flash: detected chip: gd[0m
+[0;32mI (776) spi_flash: flash io: qio[0m
+[0;32mI (780) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (787) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (794) app_start: Starting scheduler on CPU0[0m
+[0;32mI (799) app_start: Starting scheduler on CPU1[0m
+[0;32mI (799) main_task: Started on CPU0[0m
+[0;32mI (809) esp_psram: Reserving pool of 8K of internal memory for DMA/internal allocations[0m
+[0;32mI (817) main_task: Calling app_main()[0m
+[0;32mI (821) ChatGPT_NVS: Switch to partition OTA_0[0m
+[0;31mE (826) esp_image: image at 0x10000 has invalid magic byte (nothing flashed here?)[0m
+[0;32mI (840) ChatGPT_NVS: no ssid, give a init value to nvs[0m
+[0;32mI (841) ChatGPT_NVS: no password, give a init value to nvs[0m
+[0;32mI (847) ChatGPT_NVS: no ChatGPT key, give a init value to key[0m
+[0;32mI (284) esp_image: segment 4: paddr=007ed974 vaddr=40374d[0;32mI (689) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (698) cpu_start: Pro cpu start user code[0m
+[0;32mI (698) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (698) cpu_start: Application information:[0m
+[0;32mI (701) cpu_start: Project name:     factory_nvs[0m
+[0;32mI (706) cpu_start: App version:      v0.5.0-dirty[0m
+[0;32mI (711) cpu_start: Compile time:     Jan  7 2024 12:13:42[0m
+[0;32mI (717) cpu_start: ELF file SHA256:  c6d6392492382e57...[0m
+[0;32mI (723) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (729) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (734) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (738) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (743) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (750) heap_init: At 3FCA27E0 len 00046F30 (283 KiB): DRAM[0m
+[0;32mI (757) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (763) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (770) esp_psram: Adding pool of 7808K of PSRAM memory to heap allocator[0m
+[0;32mI (777) spi_flash: detected chip: gd[0m
+[0;32mI (781) spi_flash: flash io: qio[0m
+[0;32mI (785) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (792) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (799) app_start: Starting scheduler on CPU0[0m
+[0;32mI (804) app_start: Starting scheduler on CPU1[0m
+[0;32mI (804) main_task: Started on CPU0[0m
+[0;32mI (814) esp_psram: Reserving pool of 8K of internal memory for DMA/internal allocations[0m
+[0;32mI (822) main_task: Calling app_main()[0m
+[0;32mI (826) ChatGPT_NVS: Switch to partition OTA_0[0m
+[0;31mE (831) esp_image: image at 0x10000 has invalid magic byte (nothing flashed here?)[0m
+[0;32mI (844) ChatGPT_NVS: stored ssid:CouCou[0m
+[0;32mI (845) ChatGPT_NVS: stored password:12345678[0m
+[0;32mI (849) ChatGPT_NVS: stored ChatGPT key:sk-OKPZ0LZ4CTvRE0IfYfPd94Z5ul3zpGSbKdzadr7U5SPTg8jX[0m

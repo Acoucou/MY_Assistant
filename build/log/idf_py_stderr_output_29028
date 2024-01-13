@@ -1,0 +1,35 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM29 instead...[0m
+[0;33m--- esp-idf-monitor 1.3.3 on \\.\COM29 921600 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4037d3a2: esp_cpu_wait_for_intr at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_hw_support/cpu.c:121
+[0m
+[0;33m0x403758c4: call_start_cpu1 at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x40375f0a: panic_abort at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/panic.c:452
+[0m
+[0;33m0x403802b5: esp_system_abort at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x40387ce1: __assert_func at F:/Espressif/frameworks/esp-idf-v5.1.2/components/newlib/assert.c:81
+[0m
+[0;33m0x403769d9: heap_caps_free at F:/Espressif/frameworks/esp-idf-v5.1.2/components/heap/heap_caps.c:387 (discriminator 1)
+[0m
+[0;33m0x40387d3d: free at F:/Espressif/frameworks/esp-idf-v5.1.2/components/newlib/heap.c:39
+[0m
+[0;33m0x420e8d5e: esp_transport_destroy at F:/Espressif/frameworks/esp-idf-v5.1.2/components/tcp_transport/transport.c:115
+ (inlined by) esp_transport_list_clean at F:/Espressif/frameworks/esp-idf-v5.1.2/components/tcp_transport/transport.c:85
+ (inlined by) esp_transport_list_destroy at F:/Espressif/frameworks/esp-idf-v5.1.2/components/tcp_transport/transport.c:74
+[0m
+[0;33m0x42084577: esp_http_client_cleanup at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_http_client/esp_http_client.c:872
+[0m
+[0;33m0x4200a2b3: baidu_asr at D:/temp/esp-box/examples/chatgpt_demo/main/main.c:251 (discriminator 15)
+[0m
+[0;33m0x4200a2d9: start_openai at D:/temp/esp-box/examples/chatgpt_demo/main/main.c:261
+[0m
+[0;33m0x4200aec2: sr_handler_task at D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:339
+[0m
+[0;33m0x40375d97: esp_restart_noos_dig at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/esp_system_chip.c:57 (discriminator 1)
+[0m
+[0;33m0x403758c4: call_start_cpu1 at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/cpu_start.c:157
+[0m
+[0m

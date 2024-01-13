@@ -1,0 +1,31 @@
+[1/11] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\main && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/spiffs/spiffsgen.py 0x200000 D:/temp/esp-box/examples/chatgpt_demo/spiffs D:/temp/esp-box/examples/chatgpt_demo/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[2/11] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\bootloader\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/temp/esp-box/examples/chatgpt_demo/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5770 bytes. 0x2890 bytes (32%) free.
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_audio.c.obj
+D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c: In function 'sr_handler_task':
+D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:300:5: warning: 'bsp_button_get' is deprecated: use espressif/button API instead [-Wdeprecated-declarations]
+  300 |     mute_flag = bsp_button_get(BSP_BUTTON_MUTE);
+      |     ^~~~~~~~~
+In file included from D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-bsp.h:8,
+                 from D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:23:
+D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-box.h:403:6: note: declared here
+  403 | bool bsp_button_get(const bsp_button_t btn)
+      |      ^~~~~~~~~~~~~~
+[4/9] Linking C static library esp-idf\main\libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable chatgpt_demo.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin
+[8/9] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/temp/esp-box/examples/chatgpt_demo/build/partition_table/partition-table.bin D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin"
+Warning: 1/2 app partitions are too small for binary chatgpt_demo.bin size 0x36cd70:
+  - Part 'uf2' 0/0 @ 0x700000 size 0x200000 (overflow 0x16cd70)
+[8/9] cmd.exe /C "cd /D F:\Espressif\frameworks\esp-idf-v5.1.2\components\esptool_py && F:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=F:/Espressif/frameworks/esp-idf-v5.1.2 -D SERIAL_TOOL=F:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/temp/esp-box/examples/chatgpt_demo/build -P F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM29 -b 921600 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 16MB 0x0 bootloader/bootloader.bin 0x700000 chatgpt_demo.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin 0xb00000 srmodels/srmodels.bin 0x900000 storage.bin
+FAILED: CMakeFiles/flash D:/temp/esp-box/examples/chatgpt_demo/build/CMakeFiles/flash 
+cmd.exe /C "cd /D F:\Espressif\frameworks\esp-idf-v5.1.2\components\esptool_py && F:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=F:/Espressif/frameworks/esp-idf-v5.1.2 -D SERIAL_TOOL=F:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/temp/esp-box/examples/chatgpt_demo/build -P F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.

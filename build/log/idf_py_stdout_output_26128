@@ -1,0 +1,17 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\bootloader\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/temp/esp-box/examples/chatgpt_demo/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5770 bytes. 0x2890 bytes (32%) free.
+[2/8] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\main && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/spiffs/spiffsgen.py 0x200000 D:/temp/esp-box/examples/chatgpt_demo/spiffs D:/temp/esp-box/examples/chatgpt_demo/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[4/8] Linking C static library esp-idf\main\libmain.a
+[5/8] Generating ld/sections.ld
+[6/8] Linking CXX executable chatgpt_demo.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin
+[8/8] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/temp/esp-box/examples/chatgpt_demo/build/partition_table/partition-table.bin D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin"
+Warning: 1/2 app partitions are too small for binary chatgpt_demo.bin size 0x351470:
+  - Part 'uf2' 0/0 @ 0x700000 size 0x200000 (overflow 0x151470)

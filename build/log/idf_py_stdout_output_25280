@@ -1,0 +1,74 @@
+[1/58] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/table/lv_example_table_1.c.obj
+[2/58] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/textarea/lv_example_textarea_3.c.obj
+[3/58] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\main && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/spiffs/spiffsgen.py 0x200000 D:/temp/esp-box/examples/chatgpt_demo/spiffs D:/temp/esp-box/examples/chatgpt_demo/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[4/58] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\bootloader\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/temp/esp-box/examples/chatgpt_demo/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5770 bytes. 0x2890 bytes (32%) free.
+[5/56] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/win/lv_example_win_1.c.obj
+[6/56] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/tileview/lv_example_tileview_1.c.obj
+[7/56] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/textarea/lv_example_textarea_1.c.obj
+[8/56] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/switch/lv_example_switch_1.c.obj
+[9/56] Building C object esp-idf/lvgl__lvgl/CMakeFiles/__idf_lvgl__lvgl.dir/examples/widgets/textarea/lv_example_textarea_2.c.obj
+[10/56] Building C object esp-idf/espressif__esp-box-lite/CMakeFiles/__idf_espressif__esp-box-lite.dir/esp-box-lite.c.obj
+[11/56] Building C object esp-idf/espressif__esp-box-lite/CMakeFiles/__idf_espressif__esp-box-lite.dir/esp-box-lite_idf5.c.obj
+[12/56] Building C object esp-idf/espressif__esp_lvgl_port/CMakeFiles/__idf_espressif__esp_lvgl_port.dir/images/img_cursor.c.obj
+[13/56] Building C object esp-idf/espressif__esp_lvgl_port/CMakeFiles/__idf_espressif__esp_lvgl_port.dir/esp_lvgl_port.c.obj
+[14/56] Building C object esp-idf/espressif__esp_lcd_touch/CMakeFiles/__idf_espressif__esp_lcd_touch.dir/esp_lcd_touch.c.obj
+[15/56] Building C object esp-idf/espressif__openai/CMakeFiles/__idf_espressif__openai.dir/OpenAI.c.obj
+[16/56] Building C object esp-idf/espressif__icm42670/CMakeFiles/__idf_espressif__icm42670.dir/icm42670.c.obj
+[17/56] Building C object esp-idf/espressif__esp_lcd_touch_tt21100/CMakeFiles/__idf_espressif__esp_lcd_touch_tt21100.dir/esp_lcd_touch_tt21100.c.obj
+[18/56] Linking C static library esp-idf\espressif__icm42670\libespressif__icm42670.a
+[19/56] Building C object esp-idf/espressif__esp-box/CMakeFiles/__idf_espressif__esp-box.dir/esp-box_idf5.c.obj
+[20/56] Building C object esp-idf/espressif__esp-box/CMakeFiles/__idf_espressif__esp-box.dir/esp-box.c.obj
+[21/56] Linking C static library esp-idf\espressif__openai\libespressif__openai.a
+[22/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/bitstream.c.obj
+[23/56] Linking C static library esp-idf\espressif__esp_lcd_touch\libespressif__esp_lcd_touch.a
+[24/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/mp3dec.c.obj
+[25/56] Linking C static library esp-idf\lvgl__lvgl\liblvgl__lvgl.a
+[26/56] Building C object esp-idf/bsp/CMakeFiles/__idf_bsp.dir/src/boards/esp32_s3_box.c.obj
+D:/temp/esp-box/components/bsp/src/boards/esp32_s3_box.c: In function 'bsp_home_button_get':
+D:/temp/esp-box/components/bsp/src/boards/esp32_s3_box.c:105:5: warning: 'bsp_button_get' is deprecated: use espressif/button API instead [-Wdeprecated-declarations]
+  105 |     return bsp_button_get(BSP_BUTTON_MAIN);
+      |     ^~~~~~
+In file included from D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-bsp.h:8,
+                 from D:/temp/esp-box/components/bsp/src/boards/esp32_s3_box.c:10:
+D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-box.h:403:6: note: declared here
+  403 | bool bsp_button_get(const bsp_button_t btn)
+      |      ^~~~~~~~~~~~~~
+[27/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dequant.c.obj
+[28/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/buffers.c.obj
+[29/56] Linking C static library esp-idf\espressif__esp_lvgl_port\libespressif__esp_lvgl_port.a
+[30/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dct32.c.obj
+[31/56] Linking C static library esp-idf\espressif__esp_lcd_touch_tt21100\libespressif__esp_lcd_touch_tt21100.a
+[32/56] Building C object esp-idf/bsp/CMakeFiles/__idf_bsp.dir/src/storage/bsp_sdcard.c.obj
+[33/56] Linking C static library esp-idf\espressif__esp-box\libespressif__esp-box.a
+[34/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/scalfact.c.obj
+[35/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/dqchan.c.obj
+[36/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/mp3tabs.c.obj
+[37/56] Linking C static library esp-idf\espressif__esp-box-lite\libespressif__esp-box-lite.a
+[38/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/hufftabs.c.obj
+[39/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/imdct.c.obj
+[40/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/huffman.c.obj
+[41/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/subband.c.obj
+[42/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/trigtabs.c.obj
+[43/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/stproc.c.obj
+[44/56] Linking C static library esp-idf\bsp\libbsp.a
+[45/56] Building CXX object esp-idf/chmorgan__esp-audio-player/CMakeFiles/__idf_chmorgan__esp-audio-player.dir/audio_wav.cpp.obj
+[46/56] Building CXX object esp-idf/chmorgan__esp-audio-player/CMakeFiles/__idf_chmorgan__esp-audio-player.dir/audio_mp3.cpp.obj
+[47/56] Building CXX object esp-idf/chmorgan__esp-audio-player/CMakeFiles/__idf_chmorgan__esp-audio-player.dir/audio_player.cpp.obj
+[48/56] Building C object esp-idf/chmorgan__esp-libhelix-mp3/CMakeFiles/__idf_chmorgan__esp-libhelix-mp3.dir/libhelix-mp3/real/polyphase.c.obj
+[49/56] Linking C static library esp-idf\chmorgan__esp-libhelix-mp3\libchmorgan__esp-libhelix-mp3.a
+[50/56] Linking C static library esp-idf\chmorgan__esp-audio-player\libchmorgan__esp-audio-player.a
+[51/56] Linking C static library esp-idf\main\libmain.a
+[52/56] Generating ld/sections.ld
+[53/56] Building C object CMakeFiles/chatgpt_demo.elf.dir/project_elf_src_esp32s3.c.obj
+[54/56] Linking CXX executable chatgpt_demo.elf
+[55/56] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin
+[56/56] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/temp/esp-box/examples/chatgpt_demo/build/partition_table/partition-table.bin D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin"
+Warning: 1/2 app partitions are too small for binary chatgpt_demo.bin size 0x357460:
+  - Part 'uf2' 0/0 @ 0x700000 size 0x200000 (overflow 0x157460)

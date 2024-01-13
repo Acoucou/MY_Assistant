@@ -1,0 +1,21 @@
+Compiler supported targets: xtensa-esp32s3-elf
+
+CMake Error at F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/component.cmake:479 (add_library):
+  Cannot find source file:
+
+    D:/temp/esp-box/examples/chatgpt_demo/main/WebAPI/main.c
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+Call Stack (most recent call first):
+  main/CMakeLists.txt:10 (idf_component_register)
+
+
+CMake Error at F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/component.cmake:479 (add_library):
+  No SOURCES given to target: __idf_main
+Call Stack (most recent call first):
+  main/CMakeLists.txt:10 (idf_component_register)
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ninja: error: rebuilding 'build.ninja': subcommand failed

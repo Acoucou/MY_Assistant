@@ -1,0 +1,381 @@
+/*
+ * SPDX-FileCopyrightText: 2023 Espressif Systems (Shanghai) CO LTD
+ *
+ * SPDX-License-Identifier: CC0-1.0
+ */
+
+#include <string.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
+#include "esp_system.h"
+#include "esp_log.h"
+#include "nvs_flash.h"
+#include "app_ui_ctrl.h"
+#include "OpenAI.h"
+#include "tts_api.h"
+#include "app_sr.h"
+#include "bsp/esp-bsp.h"
+#include "bsp_board.h"
+#include "app_audio.h"
+#include "app_wifi.h"
+#include "settings.h"
+#include "esp_crt_bundle.h"
+#include "esp_http_client.h"
+#include "cJSON.h"
+
+#define SCROLL_START_DELAY_S (1.5)
+static char *TAG = "app_main";
+static sys_param_t *sys_param = NULL;
+
+static int recived_len = 0;
+static char response_data[2048];
+char recognition_result[256]; // 用于存储识别结果的全局变量
+char asrtoken[100];
+// 百度语音识别接口地址
+#define BAIDU_ASR_URL "https://vop.baidu.com/server_api"
+#define TOKEN_URL "https://aip.baidubce.com/oauth/2.0/token"
+// 百度语音识别的API Key和Secret Key
+#define API_KEY "jVYixGAf5lI5NYqgnhp9wELw"
+#define SECRET_KEY "pAk2v6GGnOoa9k2OG7qmQ3u71BuELe5G"
+
+const char *url = "https://api.chatanywhere.com.cn/v1/chat/completions";
+const char *apiKey = "sk-OKPZ0LZ4CTvRE0IfYfPd94Z5ul3zpGSbKdzadr7U5SPTg8jX"; // 替换为您的OpenAI API密钥
+
+
+// http客户端的事件处理回调函数
+static esp_err_t http_client_event_handler(esp_http_client_event_t *evt)
+{
+    switch (evt->event_id)
+    {
+    case HTTP_EVENT_ON_CONNECTED:
+        ESP_LOGI(TAG, "connected to web-server");
+        recived_len = 0;
+        break;
+    case HTTP_EVENT_ON_DATA:
+        if (evt->user_data)
+        {
+            memcpy(evt->user_data + recived_len, evt->data, evt->data_len); // 将分片的每一片数据都复制到user_data
+            recived_len += evt->data_len;                                   // 累计偏移更新
+        }
+        break;
+    case HTTP_EVENT_ON_FINISH:
+        ESP_LOGI(TAG, "finished a request and response!");
+        recived_len = 0;
+        break;
+    case HTTP_EVENT_DISCONNECTED:
+        ESP_LOGI(TAG, "disconnected to web-server");
+        recived_len = 0;
+        break;
+    case HTTP_EVENT_ERROR:
+        ESP_LOGE(TAG, "error");
+        recived_len = 0;
+        break;
+    default:
+        break;
+    }
+
+    return ESP_OK;
+}
+
+char *getGPTAnswer(char *prompt)
+{
+    // 构建请求参数
+    cJSON *root = cJSON_CreateObject();
+    cJSON *messages_array = cJSON_CreateArray();
+    cJSON *message_item = cJSON_CreateObject();
+    cJSON_AddStringToObject(message_item, "role", "user");
+    cJSON_AddStringToObject(message_item, "content", prompt);
+    cJSON_AddItemToArray(messages_array, message_item);
+    cJSON_AddStringToObject(root, "model", "gpt-3.5-turbo");
+    cJSON_AddItemToObject(root, "messages", messages_array);
+    // cJSON_AddNumberToObject(root, "temperature", 1);
+    // cJSON_AddNumberToObject(root, "presence_penalty", 0);
+    // cJSON_AddNumberToObject(root, "frequency_penalty", 0);
+    char *request_params = cJSON_PrintUnformatted(root);
+    ESP_LOGE(TAG, "request: %s\n", request_params);
+    cJSON_Delete(root);
+
+    esp_http_client_config_t config = {
+        .url = "https://api.chatanywhere.com.cn/v1/chat/completions",
+        .event_handler = http_client_event_handler,
+        .user_data = response_data,
+        .crt_bundle_attach = esp_crt_bundle_attach};
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    esp_http_client_set_method(client, HTTP_METHOD_POST);
+
+    esp_http_client_set_header(client, "Authorization", "Bearer sk-OKPZ0LZ4CTvRE0IfYfPd94Z5ul3zpGSbKdzadr7U5SPTg8jX");
+    esp_http_client_set_header(client, "Content-Type", "application/json");
+    esp_http_client_set_post_field(client, request_params, strlen(request_params));
+    // 设置超时时间为20秒
+    esp_http_client_set_timeout_ms(client, 20000);
+
+    esp_err_t err = esp_http_client_perform(client);
+    if (err == ESP_OK)
+    {
+        int status_code = esp_http_client_get_status_code(client);
+        if (status_code != 200)
+        {
+            ESP_LOGE(TAG, "Unexpected status code: %d", status_code);
+        }
+        else
+        {
+            ESP_LOGE(TAG, "expected status code: %d", status_code);
+        }
+        ESP_LOGI(TAG, "-----Response: %s", response_data);
+
+        cJSON *json = cJSON_Parse(response_data);
+        if (json != NULL)
+        {
+            ESP_LOGE(TAG, "1\n");
+            cJSON *choices_array = cJSON_GetObjectItem(json, "choices");
+            if (choices_array != NULL && cJSON_IsArray(choices_array) && cJSON_GetArraySize(choices_array) > 0)
+            {
+                ESP_LOGE(TAG, "2\n");
+                cJSON *message_obj = cJSON_GetObjectItem(cJSON_GetArrayItem(choices_array, 0), "message");
+                if (message_obj != NULL)
+                {
+                    ESP_LOGE(TAG, "3\n");
+                    char *answer = strdup(cJSON_GetObjectItem(message_obj, "content")->valuestring);
+                    free(request_params);
+                    cJSON_Delete(json);
+                    esp_http_client_cleanup(client);
+                    return answer;
+                }
+            }
+            cJSON_Delete(json);
+        }
+    }
+    else
+    {
+        ESP_LOGE(TAG, "HTTP faile\n");
+    }
+
+    free(request_params);
+    esp_http_client_cleanup(client);
+    return "invalid_request_error";
+}
+
+// 获取百度语音识别的访问令牌
+char *getAccessToken()
+{
+    char *access_token = NULL;
+
+    esp_http_client_config_t config = {
+        .url = "https://aip.baidubce.com/oauth/2.0/token",
+        .event_handler = NULL,
+        .crt_bundle_attach = esp_crt_bundle_attach};
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    // 构建请求参数
+    char request_params[200];
+    snprintf(request_params, sizeof(request_params),
+             "grant_type=client_credentials&client_id=%s&client_secret=%s",
+             API_KEY, SECRET_KEY);
+
+    esp_http_client_set_method(client, HTTP_METHOD_POST);
+    esp_http_client_set_header(client, "Content-Type", "application/x-www-form-urlencoded");
+    esp_http_client_set_post_field(client, request_params, strlen(request_params));
+
+    esp_err_t err = esp_http_client_perform(client);
+    if (err == ESP_OK)
+    {
+        int content_length = esp_http_client_get_content_length(client);
+        char *response_buf = malloc(content_length + 1);
+        int read_len = esp_http_client_read(client, response_buf, content_length);
+        response_buf[read_len] = '\0';
+
+        cJSON *json = cJSON_Parse(response_buf);
+        if (json != NULL)
+        {
+            cJSON *access_token_json = cJSON_GetObjectItem(json, "access_token");
+            if (access_token_json != NULL)
+            {
+                access_token = strdup(access_token_json->valuestring);
+            }
+            cJSON_Delete(json);
+        }
+
+        free(response_buf);
+    }
+
+    esp_http_client_cleanup(client);
+    return access_token;
+}
+
+
+
+char *baidu_asr(uint8_t *audio_data, int audio_len)
+{
+    printf("--------------------asr press!--------------------------------\n");
+    char *asr_data = NULL;
+
+    esp_http_client_config_t config =
+        {
+            .url = "http://vop.baidu.com/server_api?dev_pid=1537&cuid=123456PHP&token=24.5b8aebe59233b1bd01e699f9432b8501.2592000.1707654515.282335-46592694",
+            .event_handler = http_client_event_handler,
+            .user_data = response_data};
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    esp_http_client_set_method(client, HTTP_METHOD_POST);
+    esp_http_client_set_post_field(client, (const char *)audio_data, audio_len);
+    esp_http_client_set_header(client, "Content-Type", "audio/wav;rate=16000");
+    esp_err_t err = esp_http_client_perform(client);
+    if (err == ESP_OK)
+    {
+        ESP_LOGE(TAG, "!!!!!!!!!!!!!!!!!!!!!!!!!!%s\n", response_data);
+        cJSON *json = cJSON_Parse(response_data);
+
+        if (json != NULL)
+        {
+            ESP_LOGE(TAG, "1\n");
+            cJSON *result_json = cJSON_GetObjectItem(json, "result");
+            ESP_LOGE(TAG, "2\n");
+            if (result_json != NULL && cJSON_IsArray(result_json))
+            {
+                ESP_LOGE(TAG, "3\n");
+                cJSON *result_array = cJSON_GetArrayItem(result_json, 0);
+                if (result_array != NULL && cJSON_IsString(result_array))
+                {
+                    ESP_LOGE(TAG, "4\n");
+                    asr_data = strdup(result_array->valuestring);
+                }
+            }
+            cJSON_Delete(json);
+        }
+
+        ESP_LOGE(TAG, "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: %s\n", asr_data);
+    }
+    else
+    {
+        ESP_LOGE(TAG, "HTTP POST request failed: %s", esp_err_to_name(err));
+    }
+    esp_http_client_cleanup(client);
+
+    return asr_data;
+}
+
+/* program flow. This function is called in app_audio.c */
+esp_err_t start_openai(uint8_t *audio, int audio_len)
+{
+    ESP_LOGE(TAG, "start\n");
+
+    char *recognition_result = baidu_asr(audio, audio_len); // 百度语音转文字
+    ESP_LOGE(TAG, "------------text: %s\n", recognition_result);
+
+    if (strlen(recognition_result) == 0)
+    {
+        ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, "API Key is not valid");
+        return ESP_FAIL;
+    }
+    ESP_LOGE(TAG, "user: %s\n", recognition_result);
+
+    if (strcmp(recognition_result, "invalid_request_error") == 0)
+    {
+        ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, "Sorry, I can't understand.");
+        ui_ctrl_show_panel(UI_CTRL_PANEL_SLEEP, 2000);
+        return ESP_FAIL;
+    }
+
+    char *response = getGPTAnswer(recognition_result); // 获得chatgpt的回答
+    ESP_LOGE(TAG, "------------response: %s\n", response);
+
+    ui_ctrl_show_panel(UI_CTRL_PANEL_GET, 0);
+    // UI listen success
+    ui_ctrl_label_show_text(UI_CTRL_LABEL_REPLY_QUESTION, recognition_result);
+    ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, recognition_result);
+
+    if (response != NULL && (strcmp(response, "invalid_request_error") == 0))
+    {
+        // UI listen fail
+        ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, "Sorry, I can't understand.");
+        ui_ctrl_show_panel(UI_CTRL_PANEL_SLEEP, 2000);
+        return ESP_FAIL;
+    }
+
+    // UI listen success
+    ui_ctrl_label_show_text(UI_CTRL_LABEL_REPLY_QUESTION, response);
+    ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, response);
+
+    if (strcmp(response, "invalid_request_error") == 0)
+    {
+        ui_ctrl_label_show_text(UI_CTRL_LABEL_LISTEN_SPEAK, "Sorry, I can't understand.");
+        ui_ctrl_show_panel(UI_CTRL_PANEL_SLEEP, 2000);
+        return ESP_FAIL;
+    }
+
+    ui_ctrl_label_show_text(UI_CTRL_LABEL_REPLY_CONTENT, response);
+    ui_ctrl_show_panel(UI_CTRL_PANEL_REPLY, 0);
+
+    ESP_LOGE(TAG, "start tts\n");
+    esp_err_t status = text_to_speech_request(response, AUDIO_CODECS_MP3);
+
+    if (status != ESP_OK)
+    {
+        ESP_LOGE(TAG, "Error creating ChatGPT request: %s\n", esp_err_to_name(status));
+        // UI reply audio fail
+        ui_ctrl_show_panel(UI_CTRL_PANEL_SLEEP, 0);
+    }
+    else
+    {
+        // Wait a moment before starting to scroll the reply content
+        vTaskDelay(pdMS_TO_TICKS(SCROLL_START_DELAY_S * 1000));
+        ui_ctrl_reply_set_audio_start_flag(true);
+    }
+    // Clearing resources
+    // result->delete(result);
+    // free(text);
+    return ESP_OK;
+}
+
+/* play audio function */
+
+static void audio_play_finish_cb(void)
+{
+    ESP_LOGI(TAG, "replay audio end");
+    if (ui_ctrl_reply_get_audio_start_flag())
+    {
+        ui_ctrl_reply_set_audio_end_flag(true);
+    }
+}
+
+void app_main()
+{
+    // Initialize NVS
+    esp_err_t ret = nvs_flash_init();
+    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
+    {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(ret);
+    ESP_ERROR_CHECK(settings_read_parameter_from_nvs());
+    sys_param = settings_get_parameter();
+
+    bsp_spiffs_mount();
+    bsp_i2c_init();
+    bsp_display_start();
+    bsp_board_init();
+
+    ESP_LOGI(TAG, "Display LVGL demo");
+    bsp_display_backlight_on();
+    ui_ctrl_init();
+    app_network_start();
+
+    ESP_LOGI(TAG, "speech recognition start");
+    app_sr_start(false);
+    audio_register_play_finish_cb(audio_play_finish_cb);
+
+    while (true)
+    {
+        ESP_LOGD(TAG, "\tDescription\tInternal\tSPIRAM");
+        ESP_LOGD(TAG, "Current Free Memory\t%d\t\t%d",
+                 heap_caps_get_free_size(MALLOC_CAP_8BIT | MALLOC_CAP_INTERNAL),
+                 heap_caps_get_free_size(MALLOC_CAP_SPIRAM));
+        ESP_LOGD(TAG, "Min. Ever Free Size\t%d\t\t%d",
+                 heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT | MALLOC_CAP_INTERNAL),
+                 heap_caps_get_minimum_free_size(MALLOC_CAP_SPIRAM));
+        vTaskDelay(pdMS_TO_TICKS(5 * 1000));
+    }
+}

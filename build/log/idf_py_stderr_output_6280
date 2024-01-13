@@ -1,0 +1,28 @@
+CMake Error at F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/build.cmake:540 (message):
+  ERROR: Some components (espressif/openai) in the "managed_components"
+  directory were modified on the disk since the last run of the CMake.
+  Content of this directory is managed automatically.
+
+  If you want to keep the changes, you can move the directory with the
+  component to the "components"directory of your project.
+
+  I.E.  for "espressif__openai" run:
+
+  mv
+  D:\temp\esp-box\examples\chatgpt_demo\managed_components\espressif__openai
+  D:\temp\esp-box\examples\chatgpt_demo\components\espressif__openai
+
+  Or, if you want to discard the changes remove the ".component_hash" file
+  from the component's directory.
+
+  I.E.  for "espressif__openai" run:
+
+  rm
+  D:\temp\esp-box\examples\chatgpt_demo\managed_components\espressif__openai\.component_hash
+
+
+Call Stack (most recent call first):
+  F:/Espressif/frameworks/esp-idf-v5.1.2/tools/cmake/project.cmake:547 (idf_build_process)
+  CMakeLists.txt:12 (project)
+
+

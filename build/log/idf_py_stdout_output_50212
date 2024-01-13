@@ -1,0 +1,6 @@
+-- Component directory D:/temp/esp-box/components/esp-rainmaker does not contain a CMakeLists.txt file. No component will be added
+-- Component directory D:/temp/esp-box/components/lvgl does not contain a CMakeLists.txt file. No component will be added
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32s3
+-- Configuring incomplete, errors occurred!
+See also "D:/temp/esp-box/examples/chatgpt_demo/build/CMakeFiles/CMakeOutput.log".

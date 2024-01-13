@@ -1,0 +1,7 @@
+--flash_mode dio --flash_freq 80m --flash_size 16MB
+0x0 bootloader/bootloader.bin
+0x700000 chatgpt_demo.bin
+0x8000 partition_table/partition-table.bin
+0xd000 ota_data_initial.bin
+0xb00000 srmodels/srmodels.bin
+0x900000 storage.bin

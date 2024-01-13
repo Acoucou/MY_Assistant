@@ -1,0 +1,1040 @@
+[0;32mI (100) boot:  4 uf2              factory app      00 00 ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037d3a2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x18e4
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3084
+entry 0x403c9934
+[0;32mI (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 30 2023 16:02:27[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (85) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 00600000[0m
+[0;32mI (100) boot:  4 uf2              factory app      00 00 00700000 00200000[0m
+[0;32mI (107) boot:  5 storage          Unknown data     01 82 00900000 00200000[0m
+[0;32mI (115) boot:  6 model            Unknown data     01 82 00b00000 003e8000[0m
+[0;32mI (123) boot: End of partition table[0m
+[0;32mI (127) esp_image: segment 0: paddr=00010020 vaddr=3c120020 size=230c6ch (2296940) map[0m
+[0;32mI (483) esp_image: segment 1: paddr=00240c94 vaddr=3fc9ba00 size=071ach ( 29100) load[0m
+[0;32mI (489) esp_image: segment 2: paddr=00247e48 vaddr=40374000 size=081d0h ( 33232) load[0m
+[0;32mI (496) esp_image: segment 3: paddr=00250020 vaddr=42000020 size=1187f0h (1148912) map[0m
+[0;32mI (672) esp_image: segment 4: paddr=00368818 vaddr=4037c1d0 size=0f81ch ( 63516) load[0m
+[0;32mI (685) esp_image: segment 5: paddr=0037803c vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (695) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (696) boot: Disabling RNG early entropy source...[0m
+[0;32mI (707) cpu_start: Multicore app[0m
+[0;32mI (707) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (707) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (711) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (716) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (721) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (727) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (732) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (737) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (743) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (749) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (755) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (761) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (765) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (770) esp_psram: Speed: 80MHz[0m
+[0;32mI (852) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (852) cpu_start: Pro cpu up.[0m
+[0;32mI (853) cpu_start: Starting app cpu, entry point is 0x403758c4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (1100) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1108) cpu_start: Pro cpu start user code[0m
+[0;32mI (1108) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1109) cpu_start: Application information:[0m
+[0;32mI (1112) cpu_start: Project name:     chatgpt_demo[0m
+[0;32mI (1117) cpu_start: App version:      v0.5.0-dirty[0m
+[0;32mI (1123) cpu_start: Compile time:     Jan 13 2024 16:58:31[0m
+[0;32mI (1129) cpu_start: ELF file SHA256:  8dc431b6e7e7739b...[0m
+[0;32mI (1135) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (1140) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1145) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (1150) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (1155) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1162) heap_init: At 3FCA9170 len 000405A0 (257 KiB): DRAM[0m
+[0;32mI (1168) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (1175) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (1182) esp_psram: Adding pool of 7040K of PSRAM memory to heap allocator[0m
+[0;32mI (1189) spi_flash: detected chip: gd[0m
+[0;32mI (1194) spi_flash: flash io: qio[0m
+[0;32mI (1198) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1204) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1212) app_start: Starting scheduler on CPU0[0m
+[0;32mI (1217) app_start: Starting scheduler on CPU1[0m
+[0;32mI (1217) main_task: Started on CPU0[0m
+[0;32mI (1227) esp_psram: Reserving pool of 8K of internal memory for DMA/internal allocations[0m
+[0;32mI (1235) main_task: Calling app_main()[0m
+[0;32mI (1254) settings: stored ssid:HSWF206[0m
+[0;32mI (1255) settings: stored password:HSWF3901[0m
+[0;32mI (1255) settings: stored OpenAI:sk-xxxxxxxx[0m
+[0;32mI (1383) ESP-BOX: Partition size: total: 1920401, used: 1038136[0m
+[0;32mI (1383) LVGL: Starting LVGL task[0m
+[0;32mI (1384) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1392) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1522) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1523) board: [+ Btn Init] ID[0m
+[0;32mI (1524) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1529) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1539) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1543) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1553) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1557) board: [+ register] ID:1, event:0[0m
+[0;32mI (1562) board: [+ register] ID:1, event:1[0m
+[0;32mI (1570) ES8311: Work in Slave mode[0m
+[0;32mI (1572) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1582) ES7210: Work in Slave mode[0m
+[0;32mI (1587) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1590) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1596) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1600) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1608) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1614) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1622) ES7210: Bits 16[0m
+[0;32mI (1627) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1630) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1637) ES7210: Unmuted[0m
+[0;32mI (1637) Adev_Codec: Open codec device OK[0m
+[0;32mI (1644) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1648) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1662) Adev_Codec: Open codec device OK[0m
+[0;31mE (1662) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (1669) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1675) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1683) ES7210: Bits 16[0m
+[0;32mI (1689) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1691) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1698) ES7210: Unmuted[0m
+[0;32mI (1698) Adev_Codec: Open codec device OK[0m
+[0;32mI (1703) app_main: Display LVGL demo[0m
+[0;32mI (1707) ESP-BOX: Setting LCD backlight: 100%[0m
+[0;32mI (1740) app_main: speech recognition start[0m
+[0;32mI (1740) MODEL_LOADER: The storage free size is 22272 KB[0m
+[0;32mI (1740) MODEL_LOADER: The partition size is 4000 KB[0m
+[0;32mI (1746) MODEL_LOADER: Successfully map model partition[0m
+[0;32mI (1751) AFE_SR: afe interface for speech recognition
+[0m
+[0;32mI (1757) AFE_SR: AFE version: SR_V220727
+[0m
+[0;32mI (1762) AFE_SR: Initial auido front-end, total channel: 3, mic num: 2, ref num: 1
+[0m
+[0;32mI (1770) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1776) AFE_SR: wakenet_init: 1
+[0m
+[0;32mI (1743) pp: pp rom version: e7ae62f[0m
+[0;32mI (1785) net80211: net80211 rom version: e7ae62f[0m
+I (1793) wifi:wifi driver task: 3fcc044c, prio:23, stack:6656, core=0
+I (1805) wifi:wifi firmware version: 91b9630
+I (1805) wifi:wifi certification version: v7.0
+I (1805) wifi:config NVS flash: enabled
+I (1808) wifi:config nano formating: disabled
+I (1812) wifi:Init data frame dynamic rx buffer num: 32
+I (1817) wifi:Init static rx mgmt buffer num: 5
+I (1821) wifi:Init management short buffer num: 32
+I (1826) wifi:Init static tx buffer num: 16
+I (1830) wifi:Init tx cache buffer num: 32
+I (1833) wifi:Init static tx FG buffer num: 2
+I (1837) wifi:Init static rx buffer size: 1600
+I (1842) wifi:Init static rx buffer num: 10
+I (1845) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1852) wifi_init: rx ba win: 6[0m
+[0;32mI (1853) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1858) wifi_init: udp mbox: 6[0m
+[0;32mI (1862) wifi_init: tcp mbox: 6[0m
+[0;32mI (1866) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1869) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1876) wifi_init: tcp mss: 1440[0m
+[0;32mI (1878) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (1882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2015) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2018) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (2051) wifi:mode : sta (f4:12:fa:fd:19:18)
+I (2051) wifi:enable tsf
+[0;32mI (2052) wifi station: start connect to the AP[0m
+[0;32mI (2052) wifi station: wifi_init_sta finished.HSWF206, HSWF3901[0m
+[0;32mI (2058) wifi station: NET_EVENT_POWERON_SCAN[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2139) AFE_SR: wake num: 3, mode: 0, (Jul  7 2023 11:10:53)
+[0m
+[0;32mI (2139) app_sr: Set language CN[0m
+[0;32mI (2139) app_sr: load wakenet:wn9_hiesp[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2171) AFE_SR: wakenet wn_frame_size = 512
+[0m
+[0;32mI (2174) app_sr: Feed Task[0m
+[0;32mI (2177) app_sr: audio_chunksize=1024, feed_channel=3[0m
+[0;32mI (2183) app_sr: Detection task[0m
+sr handle task, mute:0
+successfully created record_audio_buffer with a size: 256000
+audio_rx_buffer with a size: 1048576
+[0;32mI (2352) file_iterator: File : echo_cn_end.wav[0m
+[0;32mI (2364) file_iterator: File : echo_cn_ok.wav[0m
+[0;32mI (2370) file_iterator: File : echo_cn_wake.wav[0m
+[0;32mI (2376) file_iterator: File : echo_en_end.wav[0m
+[0;32mI (2389) file_iterator: File : echo_en_ok.wav[0m
+[0;32mI (2396) file_iterator: File : echo_en_wake.wav[0m
+[0;32mI (2399) file_iterator: File : Hi.mp3[0m
+[0;32mI (2407) file_iterator: File : Hi.wav[0m
+[0;32mI (2425) file_iterator: File : input.wav[0m
+[0;32mI (2427) file_iterator: File : waitPlease.mp3[0m
+[0;33mW (2487) app_sr: AFE Fetch Fail[0m
+[0;33mW (2787) app_sr: AFE Fetch Fail[0m
+[0;33mW (3087) app_sr: AFE Fetch Fail[0m
+[0;33mW (3387) app_sr: AFE Fetch Fail[0m
+[0;33mW (3687) app_sr: AFE Fetch Fail[0m
+[0;33mW (3987) app_sr: AFE Fetch Fail[0m
+[0;33mW (4287) app_sr: AFE Fetch Fail[0m
+[0;32mI (4568) wifi station: Total APs scanned = 7, ret:0[0m
+[0;32mI (4568) wifi station: SSID 		DIRECT-NQLAPTOP-8LH3EG36msSr[0m
+[0;32mI (4569) wifi station: SSID 		HSWF206[0m
+[0;32mI (4573) wifi station: SSID 		HSWF205[0m
+[0;32mI (4577) wifi station: SSID 		HSWF305[0m
+[0;32mI (4582) wifi station: SSID 		HSWF306[0m
+[0;32mI (4586) wifi station: SSID 		HSWF207[0m
+[0;33mW (4587) app_sr: AFE Fetch Fail[0m
+[0;32mI (4590) wifi station: SSID 		TP-LINK_F36C[0m
+I (4605) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1
+I (4605) wifi:state: init -> auth (b0)
+I (4615) wifi:state: auth -> assoc (0)
+I (4618) wifi:state: assoc -> run (10)
+W (4642) wifi:[ADDBA]rx delba, code:39, delete tid:0
+I (4720) wifi:connected with HSWF206, aid = 6, channel 7, BW20, bssid = fc:2e:19:ef:b5:77
+I (4720) wifi:security: WPA2-PSK, phy: bgn, rssi: -57
+I (4724) wifi:pm start, type: 1
+
+I (4725) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (4743) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4745) wifi:<ba-add>idx:0 (ifx:0, fc:2e:19:ef:b5:77), tid:0, ssn:3, winSize:64
+[0;33mW (4894) app_sr: AFE Fetch Fail[0m
+[0;33mW (5194) app_sr: AFE Fetch Fail[0m
+[0;33mW (5494) app_sr: AFE Fetch Fail[0m
+[0;32mI (5734) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5734) wifi station: got ip:192.168.1.6[0m
+[0;32mI (19662) ui-events: sr start once[0m
+[0;32mI (19668) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 2
+[0m
+[0;32mI (19668) app_audio: ### record Start[0m
+[0;32mI (19735) ui_ctrl: Swich to panel[1][0m
+[0;32mI (19809) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (19812) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (19820) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (19820) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (19826) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (19927) Adev_Codec: Open codec device OK[0m
+[0;31mE (19927) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (19929) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (19935) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (19943) ES7210: Bits 16[0m
+[0;32mI (19949) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (19952) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (19959) ES7210: Unmuted[0m
+[0;32mI (19959) Adev_Codec: Open codec device OK[0m
+[0;33mW (20029) app_sr: silence, frame:24[0m
+[0;33mW (20539) app_sr: silence, frame:11[0m
+audio play end, 32034, 31 K
+[0;33mW (22265) app_sr: silence, frame:44[0m
+[0;33mW (22580) app_sr: silence, frame:1[0m
+[0;33mW (22834) app_sr: silence, frame:1[0m
+[0;33mW (23030) app_sr: silence, frame:0[0m
+[0;33mW (23359) app_sr: silence, frame:0[0m
+[0;33mW (23614) app_sr: silence, frame:0[0m
+[0;33mW (23990) app_sr: silence, frame:3[0m
+[0;33mW (24184) app_sr: silence, frame:3[0m
+[0;33mW (24379) app_sr: silence, frame:1[0m
+[0;33mW (24634) app_sr: silence, frame:1[0m
+[0;33mW (28084) app_sr: vad Time out[0m
+[0;32mI (28084) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (28085) app_audio: ### record Stop, 141174 137K[0m
+audio load end, 11988, 11 K
+[0;31mE (28134) app_audio: [Start] start_openai, timestamp: 28134[0m
+[0;31mE (28134) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (28145) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (28150) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (28156) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (28162) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (28248) Adev_Codec: Open codec device OK[0m
+[0;31mE (28248) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (28251) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (28257) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (28264) ES7210: Bits 16[0m
+[0;32mI (28270) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (28273) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (28280) ES7210: Unmuted[0m
+[0;32mI (28280) Adev_Codec: Open codec device OK[0m
+[0;32mI (28422) stt_api: connected to web-server[0m
+[0;32mI (30663) stt_api: finished a request and response![0m
+[0;31mE (30663) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323521391166934499","err_msg":"success.","err_no":0,"result":["马斯克旗下拥有"],"sn":"4287730591705140199"}
+
+[0m
+[0;31mE (30674) stt_api: 1
+[0m
+[0;31mE (30677) stt_api: 2
+[0m
+[0;31mE (30680) stt_api: 3
+[0m
+[0;31mE (30683) stt_api: 4
+[0m
+[0;31mE (30686) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 马斯克旗下拥有
+[0m
+[0;32mI (30695) stt_api: disconnected to web-server[0m
+[0;31mE (30700) app_main: ------------text: 马斯克旗下拥有
+[0m
+[0;31mE (30706) app_main: user: 马斯克旗下拥有
+[0m
+[0;31mE (30712) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"user","content":"马斯克旗下拥有"}]}
+[0m
+[0;32mI (30868) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32205) app_main: replay audio end[0m
+[0;32mI (35001) chat_api: Chat Response Data: {"id":"chatcmpl-8gV9GJNX9PM9IXkeYuUfkQsyBN7SS","object":"chat.completion","created":1705140202,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"马斯克旗下拥有众多公司，包括特斯拉（Tesla）、SpaceX、Neuralink、The Boring Company、SolarCity等。这些公司涉及电动汽车、太空探索、人工智能、地下交通系统等多个领域。马斯克致力于推动科技创新，他的公司在各自领域都在取得令人瞩目的成就。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":35,"completion_tokens":124,"total_tokens":159},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (35054) app_main: ------------response: 马斯克旗下拥有众多公司，包括特斯拉（Tesla）、SpaceX、Neuralink、The Boring Company、SolarCity等。这些公司涉及电动汽车、太空探索、人工智能、地下交通系统等多个领域。马斯克致力于推动科技创新，他的公司在各自领域都在取得令人瞩目的成就。
+[0m
+[0;32mI (35086) ui_ctrl: Swich to panel[2][0m
+[0;32mI (35089) ui_ctrl: update reply question[0m
+[0;32mI (35094) ui_ctrl: update listen speak[0m
+[0;32mI (35099) ui_ctrl: update reply question[0m
+[0;32mI (35104) ui_ctrl: update listen speak[0m
+[0;32mI (35108) ui_ctrl: update reply content[0m
+[0;32mI (35113) ui_ctrl: decode:[323, 323] 马斯克旗下拥有众多公司，包括特斯拉（Tesla）、SpaceX、Neuralink、The Boring Company、SolarCity等。这些公司涉及电动汽车、太空探索、人工智能、地下交通系统等多个领域。马斯克致力于推动科技创新，他的公司在各自领域都在取得令人瞩目的成就。
+[0m
+[0;32mI (35147) ui_ctrl: reply scroll timer start[0m
+[0;32mI (35150) ui_ctrl: Swich to panel[3][0m
+[0;31mE (35154) app_main: start tts
+[0m
+[0;31mE (35158) TTS-Api: [Start] create_TTS_request, timestamp:35158[0m
+[0;32mI (35398) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (35851) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (35854) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (41153) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41154) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41154) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41156) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41161) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41165) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (41170) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 6725) [1048576][0m
+[0;32mI (41179) TTS-Api: HTTP_EVENT_ON_DATA, len=(6725 + 1412) [1048576][0m
+[0;32mI (41206) TTS-Api: HTTP_EVENT_ON_DATA, len=(8137 + 2824) [1048576][0m
+[0;32mI (41221) TTS-Api: HTTP_EVENT_ON_DATA, len=(10961 + 1132) [1048576][0m
+[0;32mI (41270) TTS-Api: HTTP_EVENT_ON_DATA, len=(12093 + 4096) [1048576][0m
+[0;32mI (41352) TTS-Api: HTTP_EVENT_ON_DATA, len=(16189 + 7060) [1048576][0m
+[0;32mI (41451) TTS-Api: HTTP_EVENT_ON_DATA, len=(23249 + 8472) [1048576][0m
+[0;32mI (41454) TTS-Api: HTTP_EVENT_ON_DATA, len=(31721 + 852) [1048576][0m
+[0;32mI (41530) TTS-Api: HTTP_EVENT_ON_DATA, len=(32573 + 7060) [1048576][0m
+[0;32mI (41546) TTS-Api: HTTP_EVENT_ON_DATA, len=(39633 + 1132) [1048576][0m
+[0;32mI (41577) TTS-Api: HTTP_EVENT_ON_DATA, len=(40765 + 2824) [1048576][0m
+[0;32mI (41732) TTS-Api: HTTP_EVENT_ON_DATA, len=(43589 + 13560) [1048576][0m
+[0;32mI (41864) TTS-Api: HTTP_EVENT_ON_DATA, len=(57149 + 13915) [1048576][0m
+[0;32mI (41865) TTS-Api: HTTP_EVENT_ON_FINISH:71064, 69 K[0m
+[0;31mE (41866) TTS-Api: [End] create_TTS_request, + offset:6708[0m
+[0;32mI (41872) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (41881) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (41901) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (41901) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (41905) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (41993) Adev_Codec: Open codec device OK[0m
+[0;31mE (41993) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (41996) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (42002) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (42013) ES7210: Bits 16[0m
+[0;32mI (42016) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (42019) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (42025) ES7210: Unmuted[0m
+[0;32mI (42026) Adev_Codec: Open codec device OK[0m
+[0;31mE (43379) app_audio: [End] start_openai, +offset:15245[0m
+[0;32mI (65648) app_main: replay audio end[0m
+[0;32mI (66345) ui_ctrl: reply scroll timer stop[0m
+[0;33mW (66345) ui_ctrl: Switch panel to [0] in 1000ms[0m
+[0;32mI (67358) ui_ctrl: Swich to panel[0][0m
+[0;32mI (79041) ui-events: sr start once[0m
+[0;32mI (79098) app_audio: ### record Start[0m
+[0;32mI (79098) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 2
+[0m
+[0;32mI (79116) ui_ctrl: Swich to panel[1][0m
+[0;32mI (79275) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (79284) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (79302) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (79302) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (79306) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (79403) Adev_Codec: Open codec device OK[0m
+[0;31mE (79403) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (79405) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (79411) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (79421) ES7210: Bits 16[0m
+[0;32mI (79425) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (79428) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (79435) ES7210: Unmuted[0m
+[0;32mI (79435) Adev_Codec: Open codec device OK[0m
+[0;33mW (79506) app_sr: silence, frame:26[0m
+[0;33mW (80020) app_sr: silence, frame:12[0m
+audio play end, 32034, 31 K
+[0;33mW (81171) app_sr: silence, frame:27[0m
+[0;33mW (82700) app_sr: silence, frame:0[0m
+[0;33mW (83210) app_sr: silence, frame:0[0m
+[0;33mW (83405) app_sr: silence, frame:1[0m
+[0;33mW (86676) app_sr: vad Time out[0m
+[0;32mI (86676) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (86676) app_audio: ### record Stop, 127875 124K[0m
+audio load end, 11988, 11 K
+[0;31mE (86726) app_audio: [Start] start_openai, timestamp: 86726[0m
+[0;31mE (86726) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (86745) I2S_IF: Pending out channel for in channel running[0m
+[0;32mI (86747) stt_api: connected to web-server[0m
+[0;31mE (86756) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (86756) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (86760) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (86827) Adev_Codec: Open codec device OK[0m
+[0;31mE (86828) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (86830) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (86837) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (86844) ES7210: Bits 16[0m
+[0;32mI (86851) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (86852) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (86860) ES7210: Unmuted[0m
+[0;32mI (86860) Adev_Codec: Open codec device OK[0m
+[0;32mI (88521) stt_api: finished a request and response![0m
+[0;31mE (88521) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323521644607246455","err_msg":"success.","err_no":0,"result":["介绍一下他的"],"sn":"899799702991705140257"}
+
+
+[0m
+[0;31mE (88532) stt_api: 1
+[0m
+[0;31mE (88535) stt_api: 2
+[0m
+[0;31mE (88538) stt_api: 3
+[0m
+[0;31mE (88541) stt_api: 4
+[0m
+[0;31mE (88544) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 介绍一下他的
+[0m
+[0;32mI (88552) stt_api: disconnected to web-server[0m
+[0;31mE (88558) app_main: ------------text: 介绍一下他的
+[0m
+[0;31mE (88563) app_main: user: 介绍一下他的
+[0m
+[0;31mE (88569) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"system","content":"介绍一下他的"},{"role":"user","content":"介绍一下他的"}]}
+[0m
+[0;32mI (88739) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (90789) app_main: replay audio end[0m
+[0;32mI (99984) chat_api: Chat Response Data: {"id":"chatcmpl-8gVACfuFkUc4vXYYqdlXUXBbyJWOy","object":"chat.completion","created":1705140260,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"埃隆·马斯克（Elon Musk）是一位知名的企业家和创业家，他是特斯拉汽车公司（Tesla Motors）的联合创始人、首席执行官，也是太空探索技术公司（SpaceX）和太阳能公司太阳能城（SolarCity）的创始人之一。此外，他还是人工智能公司开放人工智能开发公司（OpenAI）的联合创始人。\n\n马斯克出生于南非，曾在加拿大和美国接受教育，并在硅谷创办了一系列成功的科技公司。他以他对环保和可持续能源的积极推动而闻名。特斯拉汽车以电动车技术为基础，致力于推动环保交通和可再生能源的发展。太空探索技术公司（SpaceX）则致力于降低太空旅行成本，以便更广泛地探索太空资源和制定太空旅行计划。\n\n马斯克因其对科技、创新和环保事业的巨大贡献而备受推崇，也因其大胆的创业精神而为人所知。他经常在推特上分享自己对未来科技和生活的看法，是当今科技行业中备受瞩目的领袖之一。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":41,"completion_tokens":408,"total_tokens":449},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (100100) app_main: ------------response: 埃隆·马斯克（Elon Musk）是一位知名的企业家和创业家，他是特斯拉汽车公司（Tesla Motors）的联合创始人、首席执行官，也是太空探索技术公司（SpaceX）和太阳能公司太阳能城（SolarCity）的创始人之一。此外，他还是人工智能公司开放人工智能开发公司（OpenAI）的联合创始人。
+
+马斯克出生于南非，曾在加拿大和美国接受教育，并在硅谷创办了一系列成功的科技公司。他以他对环保和可持续能源的积极推动而闻名。特斯拉汽车以电动车技术为基础，致力于推动环保交通和可再生能源的发展。太空探索技术公司（SpaceX）则致力于降低太空旅行成本，以便更广泛地探索太空资源和制定太空旅行计划。
+
+马斯克因其对科技、创新和环保事业的巨大贡献而备受推崇，也因其大胆的创业精神而为人所知。他经常在推特上分享自己对未来科技和生活的看法，是当今科技行业中备受瞩目的领袖之一。
+[0m
+[0;32mI (100195) ui_ctrl: Swich to panel[2][0m
+[0;32mI (100199) ui_ctrl: update reply question[0m
+[0;32mI (100204) ui_ctrl: update listen speak[0m
+[0;32mI (100209) ui_ctrl: update reply question[0m
+[0;32mI (100215) ui_ctrl: update listen speak[0m
+[0;32mI (100219) ui_ctrl: update reply content[0m
+[0;32mI (100237) ui_ctrl: decode:[1047, 1047] 埃隆·马斯克（Elon Musk）是一位知名的企业家和创业家，他是特斯拉汽车公司（Tesla Motors）的联合创始人、首席执行官，也是太空探索技术公司（SpaceX）和太阳能公司太阳能城（SolarCity）的创始人之一。此外，他还是人工智能公司开放人工智能开发公司（OpenAI）的联合创始人。
+
+马斯克出生于南非，曾在加拿大和美国接受教育，并在硅谷创办了一系列成功的科技公司。他以他对环保和可持续能源的积极推动而闻名。特斯拉汽车以电动车技术为基础，致力于推动环保交通和可再生能源的发展。太空探索技术公司（SpaceX）则致力于降低太空旅行成本，以便更广泛地探索太空资源和制定太空旅行计划。
+
+马斯克因其对科技、创新和环保事业的巨大贡献而备受推崇，也因其大胆的创业精神而为人所知。他经常在推特上分享自己对未来科技和生活的看法，是当今科技行业中备受瞩目的领袖之一。
+[0m
+[0;32mI (100340) ui_ctrl: reply scroll timer start[0m
+[0;32mI (100340) ui_ctrl: Swich to panel[3][0m
+[0;31mE (100340) app_main: start tts
+[0m
+[0;31mE (100343) TTS-Api: [Start] create_TTS_request, timestamp:100343[0m
+[0;32mI (100540) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (101047) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (101050) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (116470) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116470) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116471) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116473) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116478) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116482) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (116488) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 2633) [1048576][0m
+[0;32mI (116559) TTS-Api: HTTP_EVENT_ON_DATA, len=(2633 + 8187) [1048576][0m
+[0;32mI (116576) TTS-Api: HTTP_EVENT_ON_DATA, len=(10820 + 1272) [1048576][0m
+[0;32mI (116634) TTS-Api: HTTP_EVENT_ON_DATA, len=(12092 + 5648) [1048576][0m
+[0;32mI (116663) TTS-Api: HTTP_EVENT_ON_DATA, len=(17740 + 2544) [1048576][0m
+[0;32mI (116724) TTS-Api: HTTP_EVENT_ON_DATA, len=(20284 + 5648) [1048576][0m
+[0;32mI (116734) TTS-Api: HTTP_EVENT_ON_DATA, len=(25932 + 1412) [1048576][0m
+[0;32mI (116782) TTS-Api: HTTP_EVENT_ON_DATA, len=(27344 + 4236) [1048576][0m
+[0;32mI (116784) TTS-Api: HTTP_EVENT_ON_DATA, len=(31580 + 992) [1048576][0m
+[0;32mI (116857) TTS-Api: HTTP_EVENT_ON_DATA, len=(32572 + 7060) [1048576][0m
+[0;32mI (116867) TTS-Api: HTTP_EVENT_ON_DATA, len=(39632 + 1132) [1048576][0m
+[0;32mI (116897) TTS-Api: HTTP_EVENT_ON_DATA, len=(40764 + 2824) [1048576][0m
+[0;32mI (117041) TTS-Api: HTTP_EVENT_ON_DATA, len=(43588 + 13560) [1048576][0m
+[0;32mI (117172) TTS-Api: HTTP_EVENT_ON_DATA, len=(57148 + 13840) [1048576][0m
+[0;32mI (117187) TTS-Api: HTTP_EVENT_ON_DATA, len=(70988 + 2544) [1048576][0m
+[0;32mI (117336) TTS-Api: HTTP_EVENT_ON_DATA, len=(73532 + 13840) [1048576][0m
+[0;32mI (117342) TTS-Api: HTTP_EVENT_ON_DATA, len=(87372 + 2544) [1048576][0m
+[0;32mI (117484) TTS-Api: HTTP_EVENT_ON_DATA, len=(89916 + 13840) [1048576][0m
+[0;32mI (117638) TTS-Api: HTTP_EVENT_ON_DATA, len=(103756 + 16384) [1048576][0m
+[0;32mI (117811) TTS-Api: HTTP_EVENT_ON_DATA, len=(120140 + 16384) [1048576][0m
+[0;32mI (117974) TTS-Api: HTTP_EVENT_ON_DATA, len=(136524 + 16384) [1048576][0m
+[0;32mI (118145) TTS-Api: HTTP_EVENT_ON_DATA, len=(152908 + 16384) [1048576][0m
+[0;32mI (118297) TTS-Api: HTTP_EVENT_ON_DATA, len=(169292 + 16384) [1048576][0m
+[0;32mI (118447) TTS-Api: HTTP_EVENT_ON_DATA, len=(185676 + 16384) [1048576][0m
+[0;32mI (118621) TTS-Api: HTTP_EVENT_ON_DATA, len=(202060 + 16384) [1048576][0m
+[0;32mI (118634) TTS-Api: HTTP_EVENT_ON_DATA, len=(218444 + 2848) [1048576][0m
+[0;32mI (118634) TTS-Api: HTTP_EVENT_ON_FINISH:221292, 216 K[0m
+[0;31mE (118636) TTS-Api: [End] create_TTS_request, + offset:18293[0m
+[0;32mI (118642) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (118651) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (118659) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (118663) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (118668) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (118784) Adev_Codec: Open codec device OK[0m
+[0;31mE (118784) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (118787) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (118793) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (118806) ES7210: Bits 16[0m
+[0;32mI (118811) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (118813) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (118816) ES7210: Unmuted[0m
+[0;32mI (118817) Adev_Codec: Open codec device OK[0m
+[0;31mE (120149) app_audio: [End] start_openai, +offset:33423[0m
+[0;32mI (192507) app_main: replay audio end[0m
+[0;32mI (193755) ui_ctrl: reply scroll timer stop[0m
+[0;33mW (193755) ui_ctrl: Switch panel to [0] in 1000ms[0m
+[0;32mI (194755) ui_ctrl: Swich to panel[0][0m
+[0;32mI (196982) ui-events: sr start once[0m
+[0;32mI (197032) app_audio: ### record Start[0m
+[0;32mI (197032) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 2
+[0m
+[0;32mI (197056) ui_ctrl: Swich to panel[1][0m
+[0;32mI (197213) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (197222) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (197238) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (197239) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (197243) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (197346) Adev_Codec: Open codec device OK[0m
+[0;31mE (197346) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (197350) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (197355) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (197363) ES7210: Bits 16[0m
+[0;32mI (197368) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (197372) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (197378) ES7210: Unmuted[0m
+[0;32mI (197379) Adev_Codec: Open codec device OK[0m
+[0;33mW (197448) app_sr: silence, frame:26[0m
+[0;33mW (197959) app_sr: silence, frame:11[0m
+audio play end, 32034, 31 K
+[0;33mW (199174) app_sr: silence, frame:28[0m
+[0;33mW (199939) app_sr: silence, frame:3[0m
+[0;33mW (200389) app_sr: silence, frame:3[0m
+[0;33mW (201094) app_sr: silence, frame:0[0m
+[0;33mW (204619) app_sr: vad Time out[0m
+[0;32mI (204619) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (204619) app_audio: ### record Stop, 127875 124K[0m
+audio load end, 11988, 11 K
+[0;31mE (204671) app_audio: [Start] start_openai, timestamp: 204671[0m
+[0;31mE (204671) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (204689) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (204698) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (204699) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (204703) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (204772) stt_api: connected to web-server[0m
+[0;32mI (204788) Adev_Codec: Open codec device OK[0m
+[0;31mE (204788) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (204791) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (204797) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (204810) ES7210: Bits 16[0m
+[0;32mI (204817) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (204818) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (204823) ES7210: Unmuted[0m
+[0;32mI (204823) Adev_Codec: Open codec device OK[0m
+[0;32mI (207399) stt_api: finished a request and response![0m
+[0;31mE (207399) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323522151103498520","err_msg":"success.","err_no":0,"result":["他有什么负面"],"sn":"28915591331705140376"}
+
+
+
+[0m
+[0;31mE (207410) stt_api: 1
+[0m
+[0;31mE (207413) stt_api: 2
+[0m
+[0;31mE (207416) stt_api: 3
+[0m
+[0;31mE (207420) stt_api: 4
+[0m
+[0;31mE (207423) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 他有什么负面
+[0m
+[0;32mI (207431) stt_api: disconnected to web-server[0m
+[0;31mE (207438) app_main: ------------text: 他有什么负面
+[0m
+[0;31mE (207443) app_main: user: 他有什么负面
+[0m
+[0;31mE (207448) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"system","content":"介绍一下他的"},{"role":"system","content":"他有什么负面"},{"role":"user","content":"他有什么负面"}]}
+[0m
+[0;32mI (207589) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (208746) app_main: replay audio end[0m
+[0;32mI (221535) chat_api: Chat Response Data: {"id":"chatcmpl-8gVC7ynfsLShtnkAKbRdOYcMETIKX","object":"chat.completion","created":1705140379,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"虽然伊隆·马斯克在科技界取得了很多成就，但也存在一些负面方面。有关他的批评主要包括以下几个方面：\n\n1. 工作环境问题：马斯克领导的一些公司，如特斯拉和SpaceX，被指责存在工作环境问题。有报道指出，员工们在公司内面对着高强度的工作压力和长时间的工作，这可能对其身体和心理健康造成负面影响。\n\n2.社交媒体言论：马斯克在社交媒体上发表过一些具有争议性的言论，有时候这些言论会引发一些负面影响，包括对公司股价和形象的影响。\n\n3.市场操纵指控：马斯克曾因其在社交媒体上发表关于特斯拉的言论而面临了市场操纵指控。这些言论可能会对特斯拉的股价造成影响，有人认为这是在操纵市场。\n\n需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":54,"completion_tokens":391,"total_tokens":445},"system_fingerprint":"fp_cbe4fa03fe"}449},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (221651) app_main: ------------response: 虽然伊隆·马斯克在科技界取得了很多成就，但也存在一些负面方面。有关他的批评主要包括以下几个方面：
+
+1. 工作环境问题：马斯克领导的一些公司，如特斯拉和SpaceX，被指责存在工作环境问题。有报道指出，员工们在公司内面对着高强度的工作压力和长时间的工作，这可能对其身体和心理健康造成负面影响。
+
+2.社交媒体言论：马斯克在社交媒体上发表过一些具有争议性的言论，有时候这些言论会引发一些负面影响，包括对公司股价和形象的影响。
+
+3.市场操纵指控：马斯克曾因其在社交媒体上发表关于特斯拉的言论而面临了市场操纵指控。这些言论可能会对特斯拉的股价造成影响，有人认为这是在操纵市场。
+
+需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。
+[0m
+[0;32mI (221742) ui_ctrl: Swich to panel[2][0m
+[0;32mI (221746) ui_ctrl: update reply question[0m
+[0;32mI (221751) ui_ctrl: update listen speak[0m
+[0;32mI (221829) ui_ctrl: update reply question[0m
+[0;32mI (221831) ui_ctrl: update listen speak[0m
+[0;32mI (221887) ui_ctrl: update reply content[0m
+[0;32mI (221894) ui_ctrl: decode:[1001, 1001] 虽然伊隆·马斯克在科技界取得了很多成就，但也存在一些负面方面。有关他的批评主要包括以下几个方面：
+
+1. 工作环境问题：马斯克领导的一些公司，如特斯拉和SpaceX，被指责存在工作环境问题。有报道指出，员工们在公司内面对着高强度的工作压力和长时间的工作，这可能对其身体和心理健康造成负面影响。
+
+2.社交媒体言论：马斯克在社交媒体上发表过一些具有争议性的言论，有时候这些言论会引发一些负面影响，包括对公司股价和形象的影响。
+
+3.市场操纵指控：马斯克曾因其在社交媒体上发表关于特斯拉的言论而面临了市场操纵指控。这些言论可能会对特斯拉的股价造成影响，有人认为这是在操纵市场。
+
+需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。
+[0m
+[0;32mI (221993) ui_ctrl: reply scroll timer start[0m
+[0;32mI (221993) ui_ctrl: Swich to panel[3][0m
+[0;31mE (221994) app_main: start tts
+[0m
+[0;31mE (221996) TTS-Api: [Start] create_TTS_request, timestamp:221996[0m
+[0;32mI (222194) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (222700) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (222704) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (225011) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225012) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225012) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225014) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225019) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225024) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (225028) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 175) [1048576][0m
+[0;32mI (225035) TTS-Api: HTTP_EVENT_ON_FINISH:175, 0 K[0m
+[0;31mE (225040) TTS-Api: [End] create_TTS_request, + offset:3044[0m
+[0;32mI (225047) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;31mE (225052) audio: unknown file type, cleaning up[0m
+[0;32mI (225068) app_main: replay audio end[0m
+[0;31mE (226557) app_audio: [End] start_openai, +offset:21886[0m
+[0;32mI (379038) app_sr: [1;32mwakeword detected[0m
+[0;32mI (379039) app_audio: ### record Start[0m
+[0;32mI (379073) ui_ctrl: Swich to panel[1][0m
+[0;32mI (379233) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 2
+[0m
+[0;33mW (379234) app_sr: silence, frame:0[0m
+[0;32mI (379242) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (379244) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (379258) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (379258) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (379262) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (379362) Adev_Codec: Open codec device OK[0m
+[0;31mE (379362) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (379364) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (379372) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (379379) ES7210: Bits 16[0m
+[0;32mI (379384) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (379387) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (379394) ES7210: Unmuted[0m
+[0;32mI (379395) Adev_Codec: Open codec device OK[0m
+[0;33mW (379465) app_sr: silence, frame:18[0m
+[0;33mW (379976) app_sr: silence, frame:11[0m
+audio play end, 32034, 31 K
+[0;33mW (382659) app_sr: silence, frame:71[0m
+[0;33mW (383170) app_sr: silence, frame:3[0m
+[0;33mW (383560) app_sr: silence, frame:5[0m
+[0;33mW (386889) app_sr: vad Time out[0m
+[0;32mI (386890) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (386890) app_audio: ### record Stop, 131967 128K[0m
+audio load end, 11988, 11 K
+[0;31mE (386945) app_audio: [Start] start_openai, timestamp: 386945[0m
+[0;31mE (386945) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (386961) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (386969) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (386969) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (386975) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (387070) Adev_Codec: Open codec device OK[0m
+[0;31mE (387070) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (387073) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (387080) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (387076) stt_api: connected to web-server[0m
+[0;32mI (387091) ES7210: Bits 16[0m
+[0;32mI (387099) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (387101) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (387107) ES7210: Unmuted[0m
+[0;32mI (387108) Adev_Codec: Open codec device OK[0m
+[0;32mI (390184) stt_api: finished a request and response![0m
+[0;31mE (390184) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323522932845166736","err_msg":"success.","err_no":0,"result":["嗯"],"sn":"540333904991705140558"}
+31705140376"}
+
+
+
+[0m
+[0;31mE (390196) stt_api: 1
+[0m
+[0;31mE (390199) stt_api: 2
+[0m
+[0;31mE (390202) stt_api: 3
+[0m
+[0;31mE (390205) stt_api: 4
+[0m
+[0;31mE (390209) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 嗯
+[0m
+[0;32mI (390215) stt_api: disconnected to web-server[0m
+[0;31mE (390221) app_main: ------------text: 嗯
+[0m
+[0;31mE (390225) app_main: user: 嗯
+[0m
+[0;31mE (390229) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"system","content":"介绍一下他的"},{"role":"system","content":"他有什么负面"},{"role":"system","content":"嗯"},{"role":"user","content":"嗯"}]}
+[0m
+[0;32mI (390381) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (391032) app_main: replay audio end[0m
+[0;32mI (396845) chat_api: Chat Response Data: {"id":"chatcmpl-8gVF4P8UUUwurGruKZ5fksFWSY59I","object":"chat.completion","created":1705140562,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"马斯克旗下拥有多家知名公司，其中包括特斯拉、SpaceX、Neuralink和The Boring Company等。这些公司在电动汽车、太空探索、神经科学和基础设施建设等领域都有着重要的地位。\n\n在过去，马斯克经常因为其言论和行为而受到负面报道。他曾在社交媒体上发布一些有争议的言论，也因为一些决策和行为受到质疑。此外，他领导的公司也曾面临一些负面的新闻报道，比如特斯拉的生产问题和安全事故，SpaceX的发射失败等。但马斯克的支持者们认为他对科技创新和未来发展做出了重要贡献，并对他的业绩持乐观态度。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":56,"completion_tokens":261,"total_tokens":317},"system_fingerprint":"fp_cbe4fa03fe"}需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":54,"completion_tokens":391,"total_tokens":445},"system_fingerprint":"fp_cbe4fa03fe"}449},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (396962) app_main: ------------response: 马斯克旗下拥有多家知名公司，其中包括特斯拉、SpaceX、Neuralink和The Boring Company等。这些公司在电动汽车、太空探索、神经科学和基础设施建设等领域都有着重要的地位。
+
+在过去，马斯克经常因为其言论和行为而受到负面报道。他曾在社交媒体上发布一些有争议的言论，也因为一些决策和行为受到质疑。此外，他领导的公司也曾面临一些负面的新闻报道，比如特斯拉的生产问题和安全事故，SpaceX的发射失败等。但马斯克的支持者们认为他对科技创新和未来发展做出了重要贡献，并对他的业绩持乐观态度。
+[0m
+[0;32mI (397024) ui_ctrl: Swich to panel[2][0m
+[0;32mI (397028) ui_ctrl: update reply question[0m
+[0;32mI (397032) ui_ctrl: update listen speak[0m
+[0;32mI (397038) ui_ctrl: update reply question[0m
+[0;32mI (397043) ui_ctrl: update listen speak[0m
+[0;32mI (397047) ui_ctrl: update reply content[0m
+[0;32mI (397054) ui_ctrl: decode:[674, 674] 马斯克旗下拥有多家知名公司，其中包括特斯拉、SpaceX、Neuralink和The Boring Company等。这些公司在电动汽车、太空探索、神经科学和基础设施建设等领域都有着重要的地位。
+
+在过去，马斯克经常因为其言论和行为而受到负面报道。他曾在社交媒体上发布一些有争议的言论，也因为一些决策和行为受到质疑。此外，他领导的公司也曾面临一些负面的新闻报道，比如特斯拉的生产问题和安全事故，SpaceX的发射失败等。但马斯克的支持者们认为他对科技创新和未来发展做出了重要贡献，并对他的业绩持乐观态度。
+[0m
+[0;32mI (397125) ui_ctrl: reply scroll timer start[0m
+[0;32mI (397126) ui_ctrl: Swich to panel[3][0m
+[0;31mE (397126) app_main: start tts
+[0m
+[0;31mE (397128) TTS-Api: [Start] create_TTS_request, timestamp:397128[0m
+[0;32mI (397325) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (397799) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (397803) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (408237) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408237) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408237) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408240) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408245) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408249) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (408254) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 2633) [1048576][0m
+[0;32mI (408350) TTS-Api: HTTP_EVENT_ON_DATA, len=(2633 + 8187) [1048576][0m
+[0;32mI (408357) TTS-Api: HTTP_EVENT_ON_DATA, len=(10820 + 1272) [1048576][0m
+[0;32mI (408395) TTS-Api: HTTP_EVENT_ON_DATA, len=(12092 + 2824) [1048576][0m
+[0;32mI (408397) TTS-Api: HTTP_EVENT_ON_DATA, len=(14916 + 1272) [1048576][0m
+[0;32mI (408436) TTS-Api: HTTP_EVENT_ON_DATA, len=(16188 + 2824) [1048576][0m
+[0;32mI (408518) TTS-Api: HTTP_EVENT_ON_DATA, len=(19012 + 8472) [1048576][0m
+[0;32mI (408556) TTS-Api: HTTP_EVENT_ON_DATA, len=(27484 + 4236) [1048576][0m
+[0;32mI (408615) TTS-Api: HTTP_EVENT_ON_DATA, len=(31720 + 5648) [1048576][0m
+[0;32mI (408622) TTS-Api: HTTP_EVENT_ON_DATA, len=(37368 + 1412) [1048576][0m
+[0;32mI (408636) TTS-Api: HTTP_EVENT_ON_DATA, len=(38780 + 1984) [1048576][0m
+[0;32mI (408798) TTS-Api: HTTP_EVENT_ON_DATA, len=(40764 + 16384) [1048576][0m
+[0;32mI (408938) TTS-Api: HTTP_EVENT_ON_DATA, len=(57148 + 16384) [1048576][0m
+[0;32mI (409078) TTS-Api: HTTP_EVENT_ON_DATA, len=(73532 + 16384) [1048576][0m
+[0;32mI (409233) TTS-Api: HTTP_EVENT_ON_DATA, len=(89916 + 16384) [1048576][0m
+[0;32mI (409387) TTS-Api: HTTP_EVENT_ON_DATA, len=(106300 + 16384) [1048576][0m
+[0;32mI (409542) TTS-Api: HTTP_EVENT_ON_DATA, len=(122684 + 16384) [1048576][0m
+[0;32mI (409571) TTS-Api: HTTP_EVENT_ON_DATA, len=(139068 + 4248) [1048576][0m
+[0;32mI (409572) TTS-Api: HTTP_EVENT_ON_FINISH:143316, 139 K[0m
+[0;31mE (409573) TTS-Api: [End] create_TTS_request, + offset:12445[0m
+[0;32mI (409579) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (409588) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (409603) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (409603) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (409607) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (409698) Adev_Codec: Open codec device OK[0m
+[0;31mE (409700) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (409702) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (409709) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (409717) ES7210: Bits 16[0m
+[0;32mI (409733) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (409739) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (409743) ES7210: Unmuted[0m
+[0;32mI (409743) Adev_Codec: Open codec device OK[0m
+[0;31mE (411086) app_audio: [End] start_openai, +offset:24141[0m
+[0;32mI (457435) app_main: replay audio end[0m
+[0;32mI (457784) ui_ctrl: reply scroll timer stop[0m
+[0;33mW (457784) ui_ctrl: Switch panel to [0] in 1000ms[0m
+[0;32mI (458787) ui_ctrl: Swich to panel[0][0m
+[0;32mI (495172) app_sr: [1;32mwakeword detected[0m
+[0;32mI (495172) app_audio: ### record Start[0m
+[0;32mI (495172) ui_ctrl: Swich to panel[1][0m
+[0;32mI (495331) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (495334) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (495338) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (495343) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (495348) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (495362) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 0
+[0m
+[0;33mW (495363) app_sr: silence, frame:0[0m
+[0;32mI (495448) Adev_Codec: Open codec device OK[0m
+[0;31mE (495448) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (495450) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (495458) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (495465) ES7210: Bits 16[0m
+[0;32mI (495470) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (495474) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (495481) ES7210: Unmuted[0m
+[0;32mI (495481) Adev_Codec: Open codec device OK[0m
+[0;33mW (495551) app_sr: silence, frame:15[0m
+[0;33mW (496124) app_sr: silence, frame:12[0m
+audio play end, 32034, 31 K
+[0;33mW (497336) app_sr: silence, frame:32[0m
+[0;33mW (497786) app_sr: silence, frame:0[0m
+[0;33mW (498101) app_sr: silence, frame:2[0m
+[0;33mW (498551) app_sr: silence, frame:2[0m
+[0;33mW (498686) app_sr: silence, frame:1[0m
+[0;33mW (499001) app_sr: silence, frame:2[0m
+[0;33mW (502271) app_sr: vad Time out[0m
+[0;32mI (502271) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (502271) app_audio: ### record Stop, 119691 116K[0m
+audio load end, 11988, 11 K
+[0;31mE (502326) app_audio: [Start] start_openai, timestamp: 502326[0m
+[0;31mE (502326) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (502342) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (502351) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (502351) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (502355) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (502444) Adev_Codec: Open codec device OK[0m
+[0;31mE (502444) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (502448) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (502453) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (502451) stt_api: connected to web-server[0m
+[0;32mI (502465) ES7210: Bits 16[0m
+[0;32mI (502472) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (502474) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (502481) ES7210: Unmuted[0m
+[0;32mI (502481) Adev_Codec: Open codec device OK[0m
+[0;32mI (505304) stt_api: finished a request and response![0m
+[0;31mE (505305) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323523426865557831","err_msg":"success.","err_no":0,"result":["介绍一下它的活动"],"sn":"769978015961705140673"}
+
+[0m
+[0;31mE (505316) stt_api: 1
+[0m
+[0;31mE (505319) stt_api: 2
+[0m
+[0;31mE (505322) stt_api: 3
+[0m
+[0;31mE (505325) stt_api: 4
+[0m
+[0;31mE (505329) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 介绍一下它的活动
+[0m
+[0;32mI (505337) stt_api: disconnected to web-server[0m
+[0;31mE (505344) app_main: ------------text: 介绍一下它的活动
+[0m
+[0;31mE (505350) app_main: user: 介绍一下它的活动
+[0m
+[0;31mE (505356) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"system","content":"介绍一下他的"},{"role":"system","content":"他有什么负面"},{"role":"system","content":"嗯"},{"role":"system","content":"介绍一下它的活动"},{"role":"user","content":"介绍一下它的活动"}]}
+[0m
+[0;32mI (505784) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (506413) app_main: replay audio end[0m
+[0;32mI (515628) chat_api: Chat Response Data: {"id":"chatcmpl-8gVGvyAKP2lV7sXPpOBvJyhqyxuA3","object":"chat.completion","created":1705140677,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"埃隆·马斯克旗下拥有多家知名公司，包括特斯拉(Tesla)、SpaceX、SolarCity、Neuralink和The Boring Company等。这些公司涉及电动汽车、太空探索、太阳能、人工智能和地下交通系统等不同领域。特斯拉是一家专注于电动汽车、太阳能产品和能源存储解决方案的公司，SpaceX致力于太空探索和推动太空技术的发展，SolarCity专注于太阳能发电系统，Neuralink致力于开发植入式微型电脑芯片，The Boring Company专注于地下隧道交通系统的研发和建设。这些公司的活动领域广泛，涉及多个高科技领域，马斯克的企业活动备受关注。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":77,"completion_tokens":257,"total_tokens":334},"system_fingerprint":"fp_cbe4fa03fe"}fe"}需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":54,"completion_tokens":391,"total_tokens":445},"system_fingerprint":"fp_cbe4fa03fe"}449},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (515744) app_main: ------------response: 埃隆·马斯克旗下拥有多家知名公司，包括特斯拉(Tesla)、SpaceX、SolarCity、Neuralink和The Boring Company等。这些公司涉及电动汽车、太空探索、太阳能、人工智能和地下交通系统等不同领域。特斯拉是一家专注于电动汽车、太阳能产品和能源存储解决方案的公司，SpaceX致力于太空探索和推动太空技术的发展，SolarCity专注于太阳能发电系统，Neuralink致力于开发植入式微型电脑芯片，The Boring Company专注于地下隧道交通系统的研发和建设。这些公司的活动领域广泛，涉及多个高科技领域，马斯克的企业活动备受关注。
+[0m
+[0;32mI (515806) ui_ctrl: Swich to panel[2][0m
+[0;32mI (515811) ui_ctrl: update reply question[0m
+[0;32mI (515816) ui_ctrl: update listen speak[0m
+[0;32mI (515894) ui_ctrl: update reply question[0m
+[0;32mI (515895) ui_ctrl: update listen speak[0m
+[0;32mI (515896) ui_ctrl: update reply content[0m
+[0;32mI (515899) ui_ctrl: decode:[672, 672] 埃隆·马斯克旗下拥有多家知名公司，包括特斯拉(Tesla)、SpaceX、SolarCity、Neuralink和The Boring Company等。这些公司涉及电动汽车、太空探索、太阳能、人工智能和地下交通系统等不同领域。特斯拉是一家专注于电动汽车、太阳能产品和能源存储解决方案的公司，SpaceX致力于太空探索和推动太空技术的发展，SolarCity专注于太阳能发电系统，Neuralink致力于开发植入式微型电脑芯片，The Boring Company专注于地下隧道交通系统的研发和建设。这些公司的活动领域广泛，涉及多个高科技领域，马斯克的企业活动备受关注。
+[0m
+[0;32mI (515965) ui_ctrl: reply scroll timer start[0m
+[0;32mI (515966) ui_ctrl: Swich to panel[3][0m
+[0;31mE (515969) app_main: start tts
+[0m
+[0;31mE (515973) TTS-Api: [Start] create_TTS_request, timestamp:515973[0m
+[0;32mI (516204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (516792) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (516794) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (527417) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527417) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527417) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527420) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527426) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527431) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (527436) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 3900) [1048576][0m
+[0;32mI (527457) TTS-Api: HTTP_EVENT_ON_DATA, len=(3900 + 1412) [1048576][0m
+[0;32mI (527459) TTS-Api: HTTP_EVENT_ON_DATA, len=(5312 + 1412) [1048576][0m
+[0;32mI (527506) TTS-Api: HTTP_EVENT_ON_DATA, len=(6724 + 4236) [1048576][0m
+[0;32mI (527509) TTS-Api: HTTP_EVENT_ON_DATA, len=(10960 + 1132) [1048576][0m
+[0;32mI (527549) TTS-Api: HTTP_EVENT_ON_DATA, len=(12092 + 2824) [1048576][0m
+[0;32mI (527630) TTS-Api: HTTP_EVENT_ON_DATA, len=(14916 + 6780) [1048576][0m
+[0;32mI (527637) TTS-Api: HTTP_EVENT_ON_DATA, len=(21696 + 1412) [1048576][0m
+[0;32mI (527640) TTS-Api: HTTP_EVENT_ON_DATA, len=(23108 + 1412) [1048576][0m
+[0;32mI (527686) TTS-Api: HTTP_EVENT_ON_DATA, len=(24520 + 2824) [1048576][0m
+[0;32mI (527714) TTS-Api: HTTP_EVENT_ON_DATA, len=(27344 + 2824) [1048576][0m
+[0;32mI (527788) TTS-Api: HTTP_EVENT_ON_DATA, len=(30168 + 7060) [1048576][0m
+[0;32mI (527821) TTS-Api: HTTP_EVENT_ON_DATA, len=(37228 + 3536) [1048576][0m
+[0;32mI (527865) TTS-Api: HTTP_EVENT_ON_DATA, len=(40764 + 4096) [1048576][0m
+[0;32mI (527995) TTS-Api: HTTP_EVENT_ON_DATA, len=(44860 + 12288) [1048576][0m
+[0;32mI (528140) TTS-Api: HTTP_EVENT_ON_DATA, len=(57148 + 15392) [1048576][0m
+[0;32mI (528144) TTS-Api: HTTP_EVENT_ON_DATA, len=(72540 + 992) [1048576][0m
+[0;32mI (528313) TTS-Api: HTTP_EVENT_ON_DATA, len=(73532 + 15392) [1048576][0m
+[0;32mI (528316) TTS-Api: HTTP_EVENT_ON_DATA, len=(88924 + 992) [1048576][0m
+[0;32mI (528474) TTS-Api: HTTP_EVENT_ON_DATA, len=(89916 + 15392) [1048576][0m
+[0;32mI (528646) TTS-Api: HTTP_EVENT_ON_DATA, len=(105308 + 16384) [1048576][0m
+[0;32mI (528796) TTS-Api: HTTP_EVENT_ON_DATA, len=(121692 + 16384) [1048576][0m
+[0;32mI (528863) TTS-Api: HTTP_EVENT_ON_DATA, len=(138076 + 6644) [1048576][0m
+[0;32mI (528863) TTS-Api: HTTP_EVENT_ON_FINISH:144720, 141 K[0m
+[0;31mE (528865) TTS-Api: [End] create_TTS_request, + offset:12892[0m
+[0;32mI (528871) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (528880) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (528893) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (528893) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (528898) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (528994) Adev_Codec: Open codec device OK[0m
+[0;31mE (528994) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (528996) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (529003) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (529011) ES7210: Bits 16[0m
+[0;32mI (529017) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (529020) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (529027) ES7210: Unmuted[0m
+[0;32mI (529027) Adev_Codec: Open codec device OK[0m
+[0;31mE (530378) app_audio: [End] start_openai, +offset:28052[0m
+[0;32mI (577191) app_main: replay audio end[0m
+[0;32mI (577215) ui_ctrl: reply scroll timer stop[0m
+[0;33mW (577215) ui_ctrl: Switch panel to [0] in 1000ms[0m
+[0;32mI (578215) ui_ctrl: Swich to panel[0][0m
+[0;32mI (723859) ui-events: sr start once[0m
+[0;32mI (723911) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 0
+[0m
+[0;32mI (723911) app_audio: ### record Start[0m
+[0;32mI (723933) ui_ctrl: Swich to panel[1][0m
+[0;32mI (724088) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (724100) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (724117) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (724117) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (724121) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (724224) Adev_Codec: Open codec device OK[0m
+[0;31mE (724224) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (724226) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (724233) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (724241) ES7210: Bits 16[0m
+[0;32mI (724246) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (724249) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (724256) ES7210: Unmuted[0m
+[0;32mI (724257) Adev_Codec: Open codec device OK[0m
+[0;33mW (724327) app_sr: silence, frame:27[0m
+[0;33mW (724896) app_sr: silence, frame:11[0m
+audio play end, 32034, 31 K
+[0;33mW (725917) app_sr: silence, frame:20[0m
+[0;33mW (729577) app_sr: vad Time out[0m
+[0;32mI (729577) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (729577) app_audio: ### record Stop, 97185 94K[0m
+audio load end, 11988, 11 K
+[0;31mE (729629) app_audio: [Start] start_openai, timestamp: 729629[0m
+[0;31mE (729629) app_main: start
+[0m
+--------------------asr press!--------------------------------
+[0;32mI (729648) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (729657) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (729657) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (729661) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (729751) Adev_Codec: Open codec device OK[0m
+[0;31mE (729751) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (729755) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (729761) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (729768) ES7210: Bits 16[0m
+[0;32mI (729773) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (729777) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (729780) stt_api: connected to web-server[0m
+[0;32mI (729790) ES7210: Unmuted[0m
+[0;32mI (729790) Adev_Codec: Open codec device OK[0m
+[0;32mI (732201) stt_api: finished a request and response![0m
+[0;31mE (732201) stt_api: !!!!!!!!!!!!!!!!!!!!!!!!!!{"corpus_no":"7323524405967556541","err_msg":"success.","err_no":0,"result":["哈喽"],"sn":"46671232301705140901"}
+8015961705140673"}
+
+[0m
+[0;31mE (732213) stt_api: 1
+[0m
+[0;31mE (732216) stt_api: 2
+[0m
+[0;31mE (732220) stt_api: 3
+[0m
+[0;31mE (732222) stt_api: 4
+[0m
+[0;31mE (732226) stt_api: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~result_data: 哈喽
+[0m
+[0;32mI (732233) stt_api: disconnected to web-server[0m
+[0;31mE (732239) app_main: ------------text: 哈喽
+[0m
+[0;31mE (732243) app_main: user: 哈喽
+[0m
+[0;31mE (732247) chat_api: Chat request: {"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"马斯克旗下拥有"},{"role":"system","content":"介绍一下他的"},{"role":"system","content":"他有什么负面"},{"role":"system","content":"嗯"},{"role":"system","content":"介绍一下它的活动"},{"role":"system","content":"哈喽"},{"role":"user","content":"哈喽"}]}
+[0m
+[0;32mI (732426) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (733719) app_main: replay audio end[0m
+[0;32mI (733954) chat_api: Chat Response Data: {"id":"chatcmpl-8gVKaccydCF32QIMZTCXhF3rWgMb4","object":"chat.completion","created":1705140904,"model":"gpt-3.5-turbo-1106","choices":[{"index":0,"message":{"role":"assistant","content":"你好，有什么可以帮助你的吗？"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":77,"completion_tokens":17,"total_tokens":94},"system_fingerprint":"fp_cbe4fa03fe"}��工智能和地下交通系统等不同领域。特斯拉是一家专注于电动汽车、太阳能产品和能源存储解决方案的公司，SpaceX致力于太空探索和推动太空技术的发展，SolarCity专注于太阳能发电系统，Neuralink致力于开发植入式微型电脑芯片，The Boring Company专注于地下隧道交通系统的研发和建设。这些公司的活动领域广泛，涉及多个高科技领域，马斯克的企业活动备受关注。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":77,"completion_tokens":257,"total_tokens":334},"system_fingerprint":"fp_cbe4fa03fe"}fe"}需要指出的是，虽然马斯克存在一些负面方面，但他的成就和影响也是不可忽视的，对于科技行业和人类社会的发展都产生了深远影响。"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":54,"completion_tokens":391,"total_tokens":445},"system_fingerprint":"fp_cbe4fa03fe"}449},"system_fingerprint":"fp_cbe4fa03fe"}[0m
+[0;31mE (734072) app_main: ------------response: 你好，有什么可以帮助你的吗？
+[0m
+[0;32mI (734078) ui_ctrl: Swich to panel[2][0m
+[0;32mI (734081) ui_ctrl: update reply question[0m
+[0;32mI (734086) ui_ctrl: update listen speak[0m
+[0;32mI (734091) ui_ctrl: update reply question[0m
+[0;32mI (734095) ui_ctrl: update listen speak[0m
+[0;32mI (734100) ui_ctrl: update reply content[0m
+[0;32mI (734104) ui_ctrl: decode:[42, 42] 你好，有什么可以帮助你的吗？
+[0m
+[0;32mI (734114) ui_ctrl: reply scroll timer start[0m
+[0;32mI (734117) ui_ctrl: Swich to panel[3][0m
+[0;31mE (734122) app_main: start tts
+[0m
+[0;31mE (734126) TTS-Api: [Start] create_TTS_request, timestamp:734126[0m
+[0;32mI (734356) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (734807) TTS-Api: HTTP_EVENT_ON_CONNECTED[0m
+[0;32mI (734808) TTS-Api: HTTP_EVENT_HEADER_SENT[0m
+[0;32mI (735894) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735895) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735895) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735897) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735902) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735906) TTS-Api: HTTP_EVENT_ON_HEADER[0m
+[0;32mI (735911) TTS-Api: HTTP_EVENT_ON_DATA, len=(0 + 2635) [1048576][0m
+[0;32mI (735974) TTS-Api: HTTP_EVENT_ON_DATA, len=(2635 + 6653) [1048576][0m
+[0;32mI (735974) TTS-Api: HTTP_EVENT_ON_FINISH:9288, 9 K[0m
+[0;31mE (735975) TTS-Api: [End] create_TTS_request, + offset:1849[0m
+[0;32mI (735983) TTS-Api: HTTP_EVENT_DISCONNECTED[0m
+[0;32mI (735999) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (736008) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (736009) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (736013) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (736118) Adev_Codec: Open codec device OK[0m
+[0;31mE (736118) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (736120) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (736128) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (736138) ES7210: Bits 16[0m
+[0;32mI (736141) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (736144) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (736151) ES7210: Unmuted[0m
+[0;32mI (736151) Adev_Codec: Open codec device OK[0m
+[0;31mE (737491) app_audio: [End] start_openai, +offset:7862[0m
+[0;32mI (739172) app_main: replay audio end[0m
+[0;32mI (740164) ui_ctrl: reply scroll timer stop[0m
+[0;33mW (740164) ui_ctrl: Switch panel to [0] in 1000ms[0m
+[0;32mI (741164) ui_ctrl: Swich to panel[0][0m

@@ -1,0 +1,554 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037d3a2
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x18e4
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3084
+entry 0x403c9934
+[0;32mI (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Dec 30 2023 16:02:27[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (49) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (54) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (85) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 00600000[0m
+[0;32mI (100) boot:  4 uf2              factory app      00 00 00700000 00200000[0m
+[0;32mI (107) boot:  5 storage          Unknown data     01 82 00900000 00200000[0m
+[0;32mI (115) boot:  6 model            Unknown data     01 82 00b00000 003e8000[0m
+[0;32mI (123) boot: End of partition table[0m
+[0;32mI (127) esp_image: segment 0: paddr=00010020 vaddr=3c120020 size=2205a4h (2229668) map[0m
+[0;32mI (473) esp_image: segment 1: paddr=002305cc vaddr=3fc9ba00 size=071ach ( 29100) load[0m
+[0;32mI (479) esp_image: segment 2: paddr=00237780 vaddr=40374000 size=08898h ( 34968) load[0m
+[0;32mI (486) esp_image: segment 3: paddr=00240020 vaddr=42000020 size=1122a8h (1122984) map[0m
+[0;32mI (658) esp_image: segment 4: paddr=003522d0 vaddr=4037c898 size=0f154h ( 61780) load[0m
+[0;32mI (670) esp_image: segment 5: paddr=0036142c vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (681) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (681) boot: Disabling RNG early entropy source...[0m
+[0;32mI (693) cpu_start: Multicore app[0m
+[0;32mI (693) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (693) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (696) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (702) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (707) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (712) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (717) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (723) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (729) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (734) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (741) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (746) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (751) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (756) esp_psram: Speed: 80MHz[0m
+[0;32mI (838) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (838) cpu_start: Pro cpu up.[0m
+[0;32mI (838) cpu_start: Starting app cpu, entry point is 0x403758c4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (1085) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1094) cpu_start: Pro cpu start user code[0m
+[0;32mI (1094) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1094) cpu_start: Application information:[0m
+[0;32mI (1097) cpu_start: Project name:     chatgpt_demo[0m
+[0;32mI (1103) cpu_start: App version:      v0.5.0-dirty[0m
+[0;32mI (1108) cpu_start: Compile time:     Jan  7 2024 14:52:06[0m
+[0;32mI (1114) cpu_start: ELF file SHA256:  b4ca4a014a947283...[0m
+[0;32mI (1121) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (1126) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1131) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (1136) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (1141) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1148) heap_init: At 3FCA80D8 len 00041638 (261 KiB): DRAM[0m
+[0;32mI (1154) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (1161) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (1167) esp_psram: Adding pool of 7040K of PSRAM memory to heap allocator[0m
+[0;32mI (1175) spi_flash: detected chip: gd[0m
+[0;32mI (1179) spi_flash: flash io: qio[0m
+[0;32mI (1183) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1190) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1197) app_start: Starting scheduler on CPU0[0m
+[0;32mI (1202) app_start: Starting scheduler on CPU1[0m
+[0;32mI (1202) main_task: Started on CPU0[0m
+[0;32mI (1212) esp_psram: Reserving pool of 8K of internal memory for DMA/internal allocations[0m
+[0;32mI (1220) main_task: Calling app_main()[0m
+[0;32mI (1239) settings: stored ssid:CouCou[0m
+[0;32mI (1239) settings: stored password:12345678[0m
+[0;32mI (1240) settings: stored OpenAI:sk-OKPZ0LZ4CTvRE0IfYfPd94Z5ul3zpGSbKdzadr7U5SPTg8jX[0m
+[0;32mI (1371) ESP-BOX: Partition size: total: 1920401, used: 1038136[0m
+[0;32mI (1372) LVGL: Starting LVGL task[0m
+[0;32mI (1372) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1380) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1510) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1511) board: [+ Btn Init] ID[0m
+[0;32mI (1512) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1517) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1527) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1531) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1541) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1545) board: [+ register] ID:1, event:0[0m
+[0;32mI (1550) board: [+ register] ID:1, event:1[0m
+[0;32mI (1558) ES8311: Work in Slave mode[0m
+[0;32mI (1560) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1570) ES7210: Work in Slave mode[0m
+[0;32mI (1575) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1578) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1584) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1588) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1596) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1602) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1610) ES7210: Bits 16[0m
+[0;32mI (1615) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1618) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1625) ES7210: Unmuted[0m
+[0;32mI (1625) Adev_Codec: Open codec device OK[0m
+[0;32mI (1632) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1636) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1650) Adev_Codec: Open codec device OK[0m
+[0;31mE (1650) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (1657) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1663) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1671) ES7210: Bits 16[0m
+[0;32mI (1677) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1679) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1686) ES7210: Unmuted[0m
+[0;32mI (1686) Adev_Codec: Open codec device OK[0m
+[0;32mI (1691) app_main: Display LVGL demo[0m
+[0;32mI (1695) ESP-BOX: Setting LCD backlight: 100%[0m
+[0;32mI (1728) app_main: speech recognition start[0m
+[0;32mI (1728) MODEL_LOADER: The storage free size is 22336 KB[0m
+[0;32mI (1729) MODEL_LOADER: The partition size is 4000 KB[0m
+[0;32mI (1734) MODEL_LOADER: Successfully map model partition[0m
+[0;32mI (1740) AFE_SR: afe interface for speech recognition
+[0m
+[0;32mI (1745) AFE_SR: AFE version: SR_V220727
+[0m
+[0;32mI (1750) AFE_SR: Initial auido front-end, total channel: 3, mic num: 2, ref num: 1
+[0m
+[0;32mI (1759) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1765) AFE_SR: wakenet_init: 1
+[0m
+[0;32mI (1731) pp: pp rom version: e7ae62f[0m
+[0;32mI (1774) net80211: net80211 rom version: e7ae62f[0m
+I (1780) wifi:wifi driver task: 3fcbf3b4, prio:23, stack:6656, core=0
+I (1793) wifi:wifi firmware version: 91b9630
+I (1794) wifi:wifi certification version: v7.0
+I (1794) wifi:config NVS flash: enabled
+I (1796) wifi:config nano formating: disabled
+I (1800) wifi:Init data frame dynamic rx buffer num: 32
+I (1805) wifi:Init static rx mgmt buffer num: 5
+I (1809) wifi:Init management short buffer num: 32
+I (1814) wifi:Init static tx buffer num: 16
+I (1818) wifi:Init tx cache buffer num: 32
+I (1822) wifi:Init static tx FG buffer num: 2
+I (1826) wifi:Init static rx buffer size: 1600
+I (1830) wifi:Init static rx buffer num: 10
+I (1834) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1840) wifi_init: rx ba win: 6[0m
+[0;32mI (1843) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1846) wifi_init: udp mbox: 6[0m
+[0;32mI (1850) wifi_init: tcp mbox: 6[0m
+[0;32mI (1854) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1858) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1863) wifi_init: tcp mss: 1440[0m
+[0;32mI (1866) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (2003) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2003) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2006) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (2039) wifi:mode : sta (f4:12:fa:fd:19:18)
+I (2039) wifi:enable tsf
+[0;32mI (2040) wifi station: start connect to the AP[0m
+[0;32mI (2040) wifi station: wifi_init_sta finished.CouCou, 12345678[0m
+[0;32mI (2046) wifi station: NET_EVENT_POWERON_SCAN[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2129) AFE_SR: wake num: 3, mode: 0, (Jul  7 2023 11:10:53)
+[0m
+[0;32mI (2129) app_sr: Set language EN[0m
+[0;32mI (2129) app_sr: load wakenet:wn9_hiesp[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2161) AFE_SR: wakenet wn_frame_size = 512
+[0m
+[0;32mI (2164) app_sr: Feed Task[0m
+[0;32mI (2167) app_sr: audio_chunksize=1024, feed_channel=3[0m
+[0;32mI (2174) app_sr: Detection task[0m
+sr handle task, mute:0
+successfully created record_audio_buffer with a size: 256000
+audio_rx_buffer with a size: 1048576
+[0;32mI (2342) file_iterator: File : echo_cn_end.wav[0m
+[0;32mI (2355) file_iterator: File : echo_cn_ok.wav[0m
+[0;32mI (2360) file_iterator: File : echo_cn_wake.wav[0m
+[0;32mI (2366) file_iterator: File : echo_en_end.wav[0m
+[0;32mI (2379) file_iterator: File : echo_en_ok.wav[0m
+[0;32mI (2386) file_iterator: File : echo_en_wake.wav[0m
+[0;32mI (2389) file_iterator: File : Hi.mp3[0m
+[0;32mI (2397) file_iterator: File : Hi.wav[0m
+[0;32mI (2416) file_iterator: File : input.wav[0m
+[0;32mI (2417) file_iterator: File : waitPlease.mp3[0m
+[0;33mW (2477) app_sr: AFE Fetch Fail[0m
+[0;33mW (2777) app_sr: AFE Fetch Fail[0m
+[0;33mW (3077) app_sr: AFE Fetch Fail[0m
+[0;33mW (3377) app_sr: AFE Fetch Fail[0m
+[0;33mW (3677) app_sr: AFE Fetch Fail[0m
+[0;33mW (3977) app_sr: AFE Fetch Fail[0m
+[0;33mW (4277) app_sr: AFE Fetch Fail[0m
+[0;32mI (4554) wifi station: Total APs scanned = 8, ret:0[0m
+[0;32mI (4554) wifi station: SSID 		DIRECT-NQLAPTOP-8LH3EG36msSr[0m
+[0;32mI (4555) wifi station: SSID 		HSWF206[0m
+[0;32mI (4559) wifi station: SSID 		HSWF205[0m
+[0;32mI (4563) wifi station: SSID 		HSWF306[0m
+[0;32mI (4568) wifi station: SSID 		HSWF305[0m
+[0;32mI (4572) wifi station: SSID 		HSWF207[0m
+[0;32mI (4576) wifi station: SSID 		HSWF208[0m
+[0;33mW (4577) app_sr: AFE Fetch Fail[0m
+[0;32mI (4581) wifi station: SSID 		HSWF211[0m
+[0;33mW (4885) app_sr: AFE Fetch Fail[0m
+[0;33mW (5185) app_sr: AFE Fetch Fail[0m
+[0;33mW (5485) app_sr: AFE Fetch Fail[0m
+[0;33mW (5785) app_sr: AFE Fetch Fail[0m
+[0;33mW (6085) app_sr: AFE Fetch Fail[0m
+[0;33mW (6385) app_sr: AFE Fetch Fail[0m
+[0;33mW (6685) app_sr: AFE Fetch Fail[0m
+[0;33mW (6985) app_sr: AFE Fetch Fail[0m
+[0;32mI (6995) wifi station: sta disconnect, retry attempt 1...[0m
+I (7017) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (7017) wifi:state: init -> auth (b0)
+[0;33mW (7285) app_sr: AFE Fetch Fail[0m
+I (7563) wifi:state: auth -> assoc (0)
+I (7570) wifi:state: assoc -> run (10)
+[0;33mW (7585) app_sr: AFE Fetch Fail[0m
+[0;33mW (7885) app_sr: AFE Fetch Fail[0m
+I (7996) wifi:connected with CouCou, aid = 1, channel 6, BW20, bssid = 02:b7:c7:15:93:a3
+I (7996) wifi:security: WPA3-SAE, phy: bgn, rssi: -31
+I (7999) wifi:pm start, type: 1
+
+I (8000) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (8009) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (8117) wifi:<ba-add>idx:0 (ifx:0, 02:b7:c7:15:93:a3), tid:0, ssn:2, winSize:64
+[0;33mW (8185) app_sr: AFE Fetch Fail[0m
+[0;33mW (8485) app_sr: AFE Fetch Fail[0m
+[0;33mW (8785) app_sr: AFE Fetch Fail[0m
+[0;32mI (9015) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (9016) wifi station: got ip:172.20.10.2[0m
+[0;32mI (19130) app_sr: [1;32mwakeword detected[0m
+[0;32mI (19130) app_audio: ### record Start[0m
+[0;32mI (19131) ui_ctrl: Swich to panel[1][0m
+[0;32mI (19202) app_audio: frame_rate= 16000, ch=2, width=16[0m
+[0;32mI (19205) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (19222) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (19222) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (19228) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (19267) app_sr: [1;32mAFE_FETCH_CHANNEL_VERIFIED, channel index: 2
+[0m
+[0;32mI (19331) Adev_Codec: Open codec device OK[0m
+[0;31mE (19331) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (19334) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (19339) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (19347) ES7210: Bits 16[0m
+[0;32mI (19353) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (19356) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (19363) ES7210: Unmuted[0m
+[0;32mI (19363) Adev_Codec: Open codec device OK[0m
+[0;33mW (19433) app_sr: silence, frame:14[0m
+audio play end, 32034, 31 K
+[0;33mW (22688) app_sr: vad Time out[0m
+[0;32mI (22688) app_audio: ESP_MN_STATE_TIMEOUT[0m
+[0;32mI (22689) app_audio: ### record Stop, 62403 60K[0m
+audio load end, 11988, 11 K
+[0;31mE (22737) app_audio: [Start] start_openai, timestamp: 22737[0m
+[0;32mI (22737) ui_ctrl: Swich to panel[2][0m
+[0;31mE (22739) app_main: token
+[0m
+[0;32mI (22748) I2S_IF: Pending out channel for in channel running[0m
+[0;31mE (22754) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (22757) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (22764) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (22860) Adev_Codec: Open codec device OK[0m
+[0;31mE (22860) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (22863) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (22869) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (22876) ES7210: Bits 16[0m
+[0;32mI (22882) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (22885) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (22892) ES7210: Unmuted[0m
+[0;32mI (22892) Adev_Codec: Open codec device OK[0m
+[0;31mE (23064) esp-tls-mbedtls: No server verification option set in esp_tls_cfg_t structure. Check esp_tls API reference[0m
+[0;31mE (23064) esp-tls-mbedtls: Failed to set client configurations, returned [0x8017] (ESP_ERR_MBEDTLS_SSL_SETUP_FAILED)[0m
+[0;31mE (23076) esp-tls: create_ssl_handle failed[0m
+[0;31mE (23080) esp-tls: Failed to open new connection[0m
+[0;31mE (23086) transport_base: Failed to open a new connection[0m
+[0;31mE (23094) HTTP_CLIENT: Connection failed, sock < 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400556d5  PS      : 0x00060330  A0      : 0x820fdabe  A1      : 0x3fcd62c0  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000008  A12     : 0x3fcd6504  A13     : 0x00000000  
+A14     : 0x3fcd64d4  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400556d5  LEND    : 0x400556e5  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400556d2:0x3fcd62c0 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: b4ca4a014a947283
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xa (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40375d97
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x18e4
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xda4
+load:0x403cc700,len:0x3084
+entry 0x403c9934
+[0;32mI (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Dec 30 2023 16:02:27[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (44) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (48) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 ota_0            OTA app          00 10 00010000 00600000[0m
+[0;32mI (99) boot:  4 uf2              factory app      00 00 00700000 00200000[0m
+[0;32mI (107) boot:  5 storage          Unknown data     01 82 00900000 00200000[0m
+[0;32mI (114) boot:  6 model            Unknown data     01 82 00b00000 003e8000[0m
+[0;32mI (122) boot: End of partition table[0m
+[0;32mI (126) esp_image: segment 0: paddr=00010020 vaddr=3c120020 size=2205a4h (2229668) map[0m
+[0;32mI (473) esp_image: segment 1: paddr=002305cc vaddr=3fc9ba00 size=071ach ( 29100) load[0m
+[0;32mI (478) esp_image: segment 2: paddr=00237780 vaddr=40374000 size=08898h ( 34968) load[0m
+[0;32mI (485) esp_image: segment 3: paddr=00240020 vaddr=42000020 size=1122a8h (1122984) map[0m
+[0;32mI (657) esp_image: segment 4: paddr=003522d0 vaddr=4037c898 size=0f154h ( 61780) load[0m
+[0;32mI (670) esp_image: segment 5: paddr=0036142c vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (680) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (681) boot: Disabling RNG early entropy source...[0m
+[0;32mI (692) cpu_start: Multicore app[0m
+[0;32mI (692) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (692) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (695) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (701) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (706) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (711) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (716) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (722) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (728) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (734) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (740) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (746) MSPI Timing: PSRAM timing tuning index: 4[0m
+[0;32mI (750) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (755) esp_psram: Speed: 80MHz[0m
+[0;32mI (837) mmu_psram: Instructions copied and mapped to SPIRAM[0m
+[0;32mI (837) cpu_start: Pro cpu up.[0m
+[0;32mI (838) cpu_start: Starting app cpu, entry point is 0x403758c4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (1085) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1093) cpu_start: Pro cpu start user code[0m
+[0;32mI (1093) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1094) cpu_start: Application information:[0m
+[0;32mI (1097) cpu_start: Project name:     chatgpt_demo[0m
+[0;32mI (1102) cpu_start: App version:      v0.5.0-dirty[0m
+[0;32mI (1108) cpu_start: Compile time:     Jan  7 2024 14:52:06[0m
+[0;32mI (1114) cpu_start: ELF file SHA256:  b4ca4a014a947283...[0m
+[0;32mI (1120) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (1125) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1130) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (1135) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (1140) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1147) heap_init: At 3FCA80D8 len 00041638 (261 KiB): DRAM[0m
+[0;32mI (1153) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (1160) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (1167) esp_psram: Adding pool of 7040K of PSRAM memory to heap allocator[0m
+[0;32mI (1174) spi_flash: detected chip: gd[0m
+[0;32mI (1178) spi_flash: flash io: qio[0m
+[0;32mI (1183) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (1189) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (1197) app_start: Starting scheduler on CPU0[0m
+[0;32mI (1202) app_start: Starting scheduler on CPU1[0m
+[0;32mI (1202) main_task: Started on CPU0[0m
+[0;32mI (1212) esp_psram: Reserving pool of 8K of internal memory for DMA/internal allocations[0m
+[0;32mI (1220) main_task: Calling app_main()[0m
+[0;32mI (1239) settings: stored ssid:CouCou[0m
+[0;32mI (1239) settings: stored password:12345678[0m
+[0;32mI (1240) settings: stored OpenAI:sk-OKPZ0LZ4CTvRE0IfYfPd94Z5ul3zpGSbKdzadr7U5SPTg8jX[0m
+[0;32mI (1371) ESP-BOX: Partition size: total: 1920401, used: 1038136[0m
+[0;32mI (1371) LVGL: Starting LVGL task[0m
+[0;32mI (1372) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1380) gpio: GPIO[48]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1510) gpio: GPIO[3]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:2 [0m
+[0;32mI (1511) board: [+ Btn Init] ID[0m
+[0;32mI (1512) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1517) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1527) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1531) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1541) button: IoT Button Version: 2.5.6[0m
+[0;32mI (1545) board: [+ register] ID:1, event:0[0m
+[0;32mI (1550) board: [+ register] ID:1, event:1[0m
+[0;32mI (1558) ES8311: Work in Slave mode[0m
+[0;32mI (1560) gpio: GPIO[46]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1570) ES7210: Work in Slave mode[0m
+[0;32mI (1575) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1578) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1584) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1589) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1596) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1602) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1610) ES7210: Bits 16[0m
+[0;32mI (1615) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1618) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1625) ES7210: Unmuted[0m
+[0;32mI (1625) Adev_Codec: Open codec device OK[0m
+[0;32mI (1632) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1636) I2S_IF: STD Mode 1 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1650) Adev_Codec: Open codec device OK[0m
+[0;31mE (1650) i2s_common: i2s_channel_disable(1030): the channel has not been enabled yet[0m
+[0;32mI (1657) I2S_IF: channel mode 0 bits:16/16 channel:2 mask:3[0m
+[0;32mI (1663) I2S_IF: STD Mode 0 bits:16/16 channel:2 sample_rate:16000 mask:3[0m
+[0;32mI (1671) ES7210: Bits 16[0m
+[0;32mI (1677) ES7210: Enable ES7210_INPUT_MIC1[0m
+[0;32mI (1679) ES7210: Enable ES7210_INPUT_MIC2[0m
+[0;32mI (1686) ES7210: Unmuted[0m
+[0;32mI (1686) Adev_Codec: Open codec device OK[0m
+[0;32mI (1691) app_main: Display LVGL demo[0m
+[0;32mI (1695) ESP-BOX: Setting LCD backlight: 100%[0m
+[0;32mI (1728) app_main: speech recognition start[0m
+[0;32mI (1728) MODEL_LOADER: The storage free size is 22336 KB[0m
+[0;32mI (1729) MODEL_LOADER: The partition size is 4000 KB[0m
+[0;32mI (1734) MODEL_LOADER: Successfully map model partition[0m
+[0;32mI (1740) AFE_SR: afe interface for speech recognition
+[0m
+[0;32mI (1745) AFE_SR: AFE version: SR_V220727
+[0m
+[0;32mI (1750) AFE_SR: Initial auido front-end, total channel: 3, mic num: 2, ref num: 1
+[0m
+[0;32mI (1759) AFE_SR: aec_init: 0, se_init: 1, vad_init: 1
+[0m
+[0;32mI (1765) AFE_SR: wakenet_init: 1
+[0m
+[0;32mI (1731) pp: pp rom version: e7ae62f[0m
+[0;32mI (1774) net80211: net80211 rom version: e7ae62f[0m
+I (1780) wifi:wifi driver task: 3fcbf3b4, prio:23, stack:6656, core=0
+I (1793) wifi:wifi firmware version: 91b9630
+I (1794) wifi:wifi certification version: v7.0
+I (1794) wifi:config NVS flash: enabled
+I (1796) wifi:config nano formating: disabled
+I (1800) wifi:Init data frame dynamic rx buffer num: 32
+I (1805) wifi:Init static rx mgmt buffer num: 5
+I (1809) wifi:Init management short buffer num: 32
+I (1814) wifi:Init static tx buffer num: 16
+I (1818) wifi:Init tx cache buffer num: 32
+I (1822) wifi:Init static tx FG buffer num: 2
+I (1826) wifi:Init static rx buffer size: 1600
+I (1830) wifi:Init static rx buffer num: 10
+I (1834) wifi:Init dynamic rx buffer num: 32
+[0;32mI (1840) wifi_init: rx ba win: 6[0m
+[0;32mI (1843) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1846) wifi_init: udp mbox: 6[0m
+[0;32mI (1850) wifi_init: tcp mbox: 6[0m
+[0;32mI (1854) wifi_init: tcp tx win: 5744[0m
+[0;32mI (1858) wifi_init: tcp rx win: 5744[0m
+[0;32mI (1863) wifi_init: tcp mss: 1440[0m
+[0;32mI (1866) wifi_init: WiFi/LWIP prefer SPIRAM[0m
+[0;32mI (2004) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2004) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2007) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (2046) wifi:mode : sta (f4:12:fa:fd:19:18)
+I (2046) wifi:enable tsf
+[0;32mI (2047) wifi station: start connect to the AP[0m
+[0;32mI (2047) wifi station: wifi_init_sta finished.CouCou, 12345678[0m
+[0;32mI (2053) wifi station: NET_EVENT_POWERON_SCAN[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2135) AFE_SR: wake num: 3, mode: 0, (Jul  7 2023 11:10:53)
+[0m
+[0;32mI (2135) app_sr: Set language EN[0m
+[0;32mI (2135) app_sr: load wakenet:wn9_hiesp[0m
+MC Quantized wakenet9: wakeNet9_v1h24_hiesp_3_0.63_0.635, tigger:v3, mode:2, p:0, (Jul  7 2023 11:10:53)
+[0;32mI (2167) AFE_SR: wakenet wn_frame_size = 512
+[0m
+[0;32mI (2170) app_sr: Feed Task[0m
+[0;32mI (2173) app_sr: audio_chunksize=1024, feed_channel=3[0m
+[0;32mI (2179) app_sr: Detection task[0m
+sr handle task, mute:0
+successfully created record_audio_buffer with a size: 256000
+audio_rx_buffer with a size: 1048576
+[0;32mI (2348) file_iterator: File : echo_cn_end.wav[0m
+[0;32mI (2361) file_iterator: File : echo_cn_ok.wav[0m
+[0;32mI (2366) file_iterator: File : echo_cn_wake.wav[0m
+[0;32mI (2372) file_iterator: File : echo_en_end.wav[0m
+[0;32mI (2385) file_iterator: File : echo_en_ok.wav[0m
+[0;32mI (2393) file_iterator: File : echo_en_wake.wav[0m
+[0;32mI (2395) file_iterator: File : Hi.mp3[0m
+[0;32mI (2403) file_iterator: File : Hi.wav[0m
+[0;32mI (2422) file_iterator: File : input.wav[0m
+[0;32mI (2423) file_iterator: File : waitPlease.mp3[0m
+[0;33mW (2483) app_sr: AFE Fetch Fail[0m
+[0;33mW (2783) app_sr: AFE Fetch Fail[0m
+[0;33mW (3083) app_sr: AFE Fetch Fail[0m
+[0;33mW (3383) app_sr: AFE Fetch Fail[0m
+[0;33mW (3683) app_sr: AFE Fetch Fail[0m
+[0;33mW (3983) app_sr: AFE Fetch Fail[0m
+[0;33mW (4283) app_sr: AFE Fetch Fail[0m
+[0;32mI (4561) wifi station: Total APs scanned = 8, ret:0[0m
+[0;32mI (4561) wifi station: SSID 		CouCou[0m
+[0;32mI (4561) wifi station: SSID 		DIRECT-NQLAPTOP-8LH3EG36msSr[0m
+[0;32mI (4566) wifi station: SSID 		HSWF206[0m
+[0;32mI (4570) wifi station: SSID 		HSWF205[0m
+[0;32mI (4575) wifi station: SSID 		HSWF306[0m
+[0;32mI (4579) wifi station: SSID 		HSWF305[0m
+[0;33mW (4583) app_sr: AFE Fetch Fail[0m
+[0;32mI (4583) wifi station: SSID 		HSWF207[0m
+[0;32mI (4591) wifi station: SSID 		HSWF211[0m
+I (4599) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1
+I (4602) wifi:state: init -> auth (b0)
+[0;33mW (4887) app_sr: AFE Fetch Fail[0m
+I (5158) wifi:state: auth -> assoc (0)
+I (5162) wifi:Association refused temporarily, comeback time 196 (TUs)
+[0;33mW (5187) app_sr: AFE Fetch Fail[0m
+I (5363) wifi:state: assoc -> assoc (0)
+I (5367) wifi:Association refused temporarily, comeback time 196 (TUs)
+[0;33mW (5487) app_sr: AFE Fetch Fail[0m
+I (5568) wifi:state: assoc -> assoc (0)
+I (5572) wifi:Association refused temporarily, comeback time 196 (TUs)
+I (5773) wifi:state: assoc -> assoc (0)
+I (5776) wifi:Association refused temporarily, comeback time 196 (TUs)
+[0;33mW (5787) app_sr: AFE Fetch Fail[0m
+I (5977) wifi:state: assoc -> assoc (0)
+I (5981) wifi:Association refused temporarily, comeback time 196 (TUs)
+[0;33mW (6087) app_sr: AFE Fetch Fail[0m
+I (6182) wifi:state: assoc -> assoc (0)
+I (6185) wifi:state: assoc -> run (10)
+I (6226) wifi:connected with CouCou, aid = 1, channel 6, BW20, bssid = 02:b7:c7:15:93:a3
+I (6226) wifi:security: WPA3-SAE, phy: bgn, rssi: -29
+I (6230) wifi:pm start, type: 1
+
+I (6230) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (6342) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;33mW (6387) app_sr: AFE Fetch Fail[0m
+[0;33mW (6687) app_sr: AFE Fetch Fail[0m
+I (6744) wifi:<ba-add>idx:0 (ifx:0, 02:b7:c7:15:93:a3), tid:0, ssn:9, winSize:64
+[0;33mW (6987) app_sr: AFE Fetch Fail[0m
+[0;33mW (7287) app_sr: AFE Fetch Fail[0m
+[0;33mW (7587) app_sr: AFE Fetch Fail[0m
+[0;32mI (7739) esp_netif_handlers: sta ip: 172.20.10.2, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (7739) wifi station: got ip:172.20.10.2[0m

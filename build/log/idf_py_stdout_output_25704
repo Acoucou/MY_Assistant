@@ -1,0 +1,108 @@
+[0/1] Re-running CMake...
+-- Component directory D:/temp/esp-box/components/esp-rainmaker does not contain a CMakeLists.txt file. No component will be added
+-- Component directory D:/temp/esp-box/components/lvgl does not contain a CMakeLists.txt file. No component will be added
+-- Building ESP-IDF components for target esp32s3
+Processing 16 dependencies:
+[1/16] chmorgan/esp-file-iterator (1.0.0)
+[2/16] chmorgan/esp-libhelix-mp3 (1.0.3)
+[3/16] espressif/button (2.5.6)
+[4/16] espressif/cmake_utilities (0.5.3)
+[5/16] espressif/esp-box (3.0.4)
+[6/16] espressif/esp-box-lite (2.0.3)
+[7/16] espressif/esp-dsp (1.4.10)
+[8/16] espressif/esp-sr (1.3.3)
+[9/16] espressif/esp_codec_dev (1.0.3)
+[10/16] espressif/esp_lcd_touch (1.1.1)
+[11/16] espressif/esp_lcd_touch_tt21100 (1.1.0)
+[12/16] espressif/esp_lvgl_port (1.4.0)
+[13/16] espressif/icm42670 (1.0.0)
+[14/16] espressif/openai (0.1.2)
+[15/16] idf (5.1.2)
+[16/16] lvgl/lvgl (8.3.11)
+-- PROJECT_DIR: D:/temp/esp-box/examples/chatgpt_demo
+-- PLATFORM ESP32_S3_BOX.
+-- Project sdkconfig file D:/temp/esp-box/examples/chatgpt_demo/sdkconfig
+Loading defaults file D:/temp/esp-box/examples/chatgpt_demo/sdkconfig.defaults...
+-- App "chatgpt_demo" version: v0.5.0-dirty
+-- Adding linker script D:/temp/esp-box/examples/chatgpt_demo/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/ld/esp32s3/sections.ld.in
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script F:/Espressif/frameworks/esp-idf-v5.1.2/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- OPENAI: 0.1.2
+-- BUTTON: 2.5.6
+-- PROJECT_DIR: D:/temp/esp-box/examples/chatgpt_demo
+-- PLATFORM ESP32_S3_BOX.
+-- Components: app_trace app_update bootloader bootloader_support bsp bt chmorgan__esp-audio-player chmorgan__esp-file-iterator chmorgan__esp-libhelix-mp3 cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump espressif__button espressif__cmake_utilities espressif__esp-box espressif__esp-box-lite espressif__esp-dsp espressif__esp-sr espressif__esp_codec_dev espressif__esp_lcd_touch espressif__esp_lcd_touch_tt21100 espressif__esp_lvgl_port espressif__icm42670 espressif__openai esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lvgl__lvgl lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport touch_element ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: F:/Espressif/frameworks/esp-idf-v5.1.2/components/app_trace F:/Espressif/frameworks/esp-idf-v5.1.2/components/app_update F:/Espressif/frameworks/esp-idf-v5.1.2/components/bootloader F:/Espressif/frameworks/esp-idf-v5.1.2/components/bootloader_support D:/temp/esp-box/components/bsp F:/Espressif/frameworks/esp-idf-v5.1.2/components/bt D:/temp/esp-box/examples/chatgpt_demo/components/chmorgan__esp-audio-player D:/temp/esp-box/examples/chatgpt_demo/managed_components/chmorgan__esp-file-iterator D:/temp/esp-box/examples/chatgpt_demo/managed_components/chmorgan__esp-libhelix-mp3 F:/Espressif/frameworks/esp-idf-v5.1.2/components/cmock F:/Espressif/frameworks/esp-idf-v5.1.2/components/console F:/Espressif/frameworks/esp-idf-v5.1.2/components/cxx F:/Espressif/frameworks/esp-idf-v5.1.2/components/driver F:/Espressif/frameworks/esp-idf-v5.1.2/components/efuse F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp-tls F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_adc F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_app_format F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_coex F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_common F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_eth F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_event F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_gdbstub F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_hid F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_http_client F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_http_server F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_https_ota F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_https_server F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_hw_support F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_lcd F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_local_ctrl F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_mm F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_netif F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_netif_stack F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_partition F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_phy F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_pm F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_psram F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_ringbuf F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_rom F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_timer F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_wifi F:/Espressif/frameworks/esp-idf-v5.1.2/components/espcoredump D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__button D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__cmake_utilities D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box-lite D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-dsp D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-sr D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp_codec_dev D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp_lcd_touch D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp_lcd_touch_tt21100 D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp_lvgl_port D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__icm42670 D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__openai F:/Espressif/frameworks/esp-idf-v5.1.2/components/esptool_py F:/Espressif/frameworks/esp-idf-v5.1.2/components/fatfs F:/Espressif/frameworks/esp-idf-v5.1.2/components/freertos F:/Espressif/frameworks/esp-idf-v5.1.2/components/hal F:/Espressif/frameworks/esp-idf-v5.1.2/components/heap F:/Espressif/frameworks/esp-idf-v5.1.2/components/http_parser F:/Espressif/frameworks/esp-idf-v5.1.2/components/idf_test F:/Espressif/frameworks/esp-idf-v5.1.2/components/ieee802154 F:/Espressif/frameworks/esp-idf-v5.1.2/components/json F:/Espressif/frameworks/esp-idf-v5.1.2/components/log D:/temp/esp-box/examples/chatgpt_demo/managed_components/lvgl__lvgl F:/Espressif/frameworks/esp-idf-v5.1.2/components/lwip D:/temp/esp-box/examples/chatgpt_demo/main F:/Espressif/frameworks/esp-idf-v5.1.2/components/mbedtls F:/Espressif/frameworks/esp-idf-v5.1.2/components/mqtt F:/Espressif/frameworks/esp-idf-v5.1.2/components/newlib F:/Espressif/frameworks/esp-idf-v5.1.2/components/nvs_flash F:/Espressif/frameworks/esp-idf-v5.1.2/components/openthread F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table F:/Espressif/frameworks/esp-idf-v5.1.2/components/perfmon F:/Espressif/frameworks/esp-idf-v5.1.2/components/protobuf-c F:/Espressif/frameworks/esp-idf-v5.1.2/components/protocomm F:/Espressif/frameworks/esp-idf-v5.1.2/components/pthread F:/Espressif/frameworks/esp-idf-v5.1.2/components/sdmmc F:/Espressif/frameworks/esp-idf-v5.1.2/components/soc F:/Espressif/frameworks/esp-idf-v5.1.2/components/spi_flash F:/Espressif/frameworks/esp-idf-v5.1.2/components/spiffs F:/Espressif/frameworks/esp-idf-v5.1.2/components/tcp_transport F:/Espressif/frameworks/esp-idf-v5.1.2/components/touch_element F:/Espressif/frameworks/esp-idf-v5.1.2/components/ulp F:/Espressif/frameworks/esp-idf-v5.1.2/components/unity F:/Espressif/frameworks/esp-idf-v5.1.2/components/usb F:/Espressif/frameworks/esp-idf-v5.1.2/components/vfs F:/Espressif/frameworks/esp-idf-v5.1.2/components/wear_levelling F:/Espressif/frameworks/esp-idf-v5.1.2/components/wifi_provisioning F:/Espressif/frameworks/esp-idf-v5.1.2/components/wpa_supplicant F:/Espressif/frameworks/esp-idf-v5.1.2/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/temp/esp-box/examples/chatgpt_demo/build
+[1/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_sleep_small_z_png.c.obj
+[2/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_sleep_body_eyes_png.c.obj
+[3/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_settings_icon_png.c.obj
+[4/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_setup_bg_png.c.obj
+[5/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_sleep_big_z_png.c.obj
+[6/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_setup_text_bg_png.c.obj
+[7/49] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_body_png.c.obj
+[8/49] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\bootloader\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/temp/esp-box/examples/chatgpt_demo/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5770 bytes. 0x2890 bytes (32%) free.
+[9/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[10/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WebAPI/stt_api.c.obj
+[11/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/fonts/ui_font_PingFangEN16.c.obj
+[12/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WebAPI/tts_api.c.obj
+[13/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WebAPI/chat_api.c.obj
+[14/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_body_eye_screen_png.c.obj
+[15/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/fonts/ui_font_PingFangEN14.c.obj
+[16/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/fonts/ui_font_PingFangEN20.c.obj
+[17/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_listen_back_glow_png.c.obj
+[18/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_body_shadow_png.c.obj
+[19/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_listen_body_eyes_2_png.c.obj
+[20/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_reply_body_png.c.obj
+[21/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_listen_body_eyes_1_png.c.obj
+[22/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_reset_icon_png.c.obj
+[23/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_reply_chatgpt_logo_png.c.obj
+[24/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/screens/ui_ScreenListen.c.obj
+[25/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_settings_back_png.c.obj
+[26/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_reply_small_shadow_png.c.obj
+[27/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/images/ui_img_reply_chatgpt_bg_png.c.obj
+[28/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui.c.obj
+[29/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/screens/ui_ScreenSettings.c.obj
+[30/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/screens/ui_ScreenWifiReset.c.obj
+[31/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/fonts/ui_font_KaiTiCN20.c.obj
+[32/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/screens/ui_ScreenReset.c.obj
+[33/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/screens/ui_ScreenSetup.c.obj
+[34/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_sr.c.obj
+[35/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_wifi.c.obj
+[36/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/settings/settings.c.obj
+[37/47] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\main && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/spiffs/spiffsgen.py 0x200000 D:/temp/esp-box/examples/chatgpt_demo/spiffs D:/temp/esp-box/examples/chatgpt_demo/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[38/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui/ui_helpers.c.obj
+[39/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_ui_events.c.obj
+[40/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_ui_ctrl.c.obj
+[41/47] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app/app_audio.c.obj
+D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c: In function 'sr_handler_task':
+D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:300:5: warning: 'bsp_button_get' is deprecated: use espressif/button API instead [-Wdeprecated-declarations]
+  300 |     mute_flag = bsp_button_get(BSP_BUTTON_MUTE);
+      |     ^~~~~~~~~
+In file included from D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-bsp.h:8,
+                 from D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:23:
+D:/temp/esp-box/examples/chatgpt_demo/managed_components/espressif__esp-box/include/bsp/esp-box.h:403:6: note: declared here
+  403 | bool bsp_button_get(const bsp_button_t btn)
+      |      ^~~~~~~~~~~~~~
+[42/47] Linking C static library esp-idf\main\libmain.a
+[43/47] Generating ld/sections.ld
+[44/47] Building C object CMakeFiles/chatgpt_demo.elf.dir/project_elf_src_esp32s3.c.obj
+[45/47] Linking CXX executable chatgpt_demo.elf
+[46/47] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin
+[47/47] cmd.exe /C "cd /D D:\temp\esp-box\examples\chatgpt_demo\build\esp-idf\esptool_py && F:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe F:/Espressif/frameworks/esp-idf-v5.1.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/temp/esp-box/examples/chatgpt_demo/build/partition_table/partition-table.bin D:/temp/esp-box/examples/chatgpt_demo/build/chatgpt_demo.bin"
+Warning: 1/2 app partitions are too small for binary chatgpt_demo.bin size 0x368150:
+  - Part 'uf2' 0/0 @ 0x700000 size 0x200000 (overflow 0x168150)

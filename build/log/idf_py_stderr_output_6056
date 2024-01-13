@@ -1,0 +1,48 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM29 instead...[0m
+[0;33m--- esp-idf-monitor 1.3.3 on \\.\COM29 921600 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x42112372: get_q_float_v2_728_label_1 at /home/sunxiangyu/workspace/esp_sr_lib/build/../components/esp_audio_processor/asm_functions/get_q_float_v2_728.S:29
+[0m
+[0;33m0x403758c4: call_start_cpu1 at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x4037d3a2: esp_cpu_wait_for_intr at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_hw_support/cpu.c:121
+[0m
+[0;33m0x4037578c: esp_app_get_elf_sha256 at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_app_format/esp_app_desc.c:96
+[0m
+[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 2b92c92442e69134d5eba92249ca9178fd931fca63f348f5eba356803e7fdc06[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0;33m0x4200a160: start_openai at D:/temp/esp-box/examples/chatgpt_demo/main/main.c:76
+[0m
+[0;33m0x4203c22c: OpenAI_ChatCompletionMessage at D:/temp/esp-box/examples/chatgpt_demo/components/espressif__openai/OpenAI.c:1077
+[0m
+[0;33m0x4203b070: OpenAI_ChatCompletionSetPresencePenalty at D:/temp/esp-box/examples/chatgpt_demo/components/espressif__openai/OpenAI.c:1021
+[0m
+[0;33m0x4203b5a4: OpenAI_ChatCompletionCreate at D:/temp/esp-box/examples/chatgpt_demo/components/espressif__openai/OpenAI.c:1167
+[0m
+[0;33m0x4203b9d0: OpenAI_Post at D:/temp/esp-box/examples/chatgpt_demo/components/espressif__openai/OpenAI.c:2238
+[0m
+[0;33m0x400556d5: strlen in ROM
+[0m
+[0;33m0x400556e5: strlen in ROM
+[0m
+[0;33m0x4200a15d: start_openai at D:/temp/esp-box/examples/chatgpt_demo/main/main.c:75
+[0m
+[0;33m0x4200acc2: sr_handler_task at D:/temp/esp-box/examples/chatgpt_demo/main/app/app_audio.c:339
+[0m
+[0;33m0x40375d97: esp_restart_noos_dig at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/esp_system_chip.c:57 (discriminator 1)
+[0m
+[0;33m0x403758c4: call_start_cpu1 at F:/Espressif/frameworks/esp-idf-v5.1.2/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33mTo exit from IDF monitor please use "Ctrl+]". Alternatively, you can use Ctrl+T Ctrl+X to exit.[0m
+[0m
+Traceback (most recent call last):
+  File "F:\Espressif\frameworks\esp-idf-v5.1.2\tools\idf_monitor.py", line 11, in <module>
+    sys.exit(subprocess.run([sys.executable, '-m', 'esp_idf_monitor'] + sys.argv[1:]).returncode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "subprocess.py", line 550, in run
+  File "subprocess.py", line 1199, in communicate
+  File "subprocess.py", line 1262, in wait
+  File "subprocess.py", line 1543, in _wait
+KeyboardInterrupt
