@@ -7,7 +7,7 @@
 
 static char *TAG = "stt_api";
 
-char token[] = "YOUR_TOKEN";
+char token[]="YOUR_TOKEN";
 
 static char response_data[2048];
 static int recived_len;

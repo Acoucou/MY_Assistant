@@ -7,7 +7,7 @@
 static char *TAG = "chat_api";
 
 const char *url = "https://api.chatanywhere.com.cn/v1/chat/completions";
-const char *apiKey = "Bearer Your_API_KEY"; // 替换为您的OpenAI API密钥
+const char *apiKey = "Bearer YOUR_API_KEY"; // 替换为您的OpenAI API密钥
 
 static char response_data[4096 * 2];
 
@@ -73,7 +73,7 @@ char *getGPTAnswer(char *prompt)
     for (int i = 0; i < chat_history_length; i++)
     {
         cJSON *message_item = cJSON_CreateObject();
-        cJSON_AddStringToObject(message_item, "role", "system");
+        cJSON_AddStringToObject(message_item, "role", "user");
         cJSON_AddStringToObject(message_item, "content", chat_history[i]);
         cJSON_AddItemToArray(messages_array, message_item);
     }
@@ -87,9 +87,9 @@ char *getGPTAnswer(char *prompt)
     cJSON_AddStringToObject(root, "model", "gpt-3.5-turbo");
     cJSON_AddItemToObject(root, "messages", messages_array);
 
-    // cJSON_AddNumberToObject(root, "temperature", 1);
-    // cJSON_AddNumberToObject(root, "presence_penalty", 0);
-    // cJSON_AddNumberToObject(root, "frequency_penalty", 0);
+    cJSON_AddNumberToObject(root, "temperature", 1);
+    cJSON_AddNumberToObject(root, "presence_penalty", 0);
+    cJSON_AddNumberToObject(root, "frequency_penalty", 0);
 
     char *request_params = cJSON_PrintUnformatted(root);
     ESP_LOGE(TAG, "Chat request: %s\n", request_params);
